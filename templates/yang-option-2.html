@@ -15,7 +15,27 @@
 .deco-line-l{position:absolute;left:60px;top:200px;width:1px;height:120px;background:linear-gradient(to bottom,rgba(58,106,138,0.12),transparent)}
 .deco-line-r{position:absolute;right:60px;top:200px;width:1px;height:120px;background:linear-gradient(to bottom,rgba(58,106,138,0.12),transparent)}
 </style></head><body><div class="ad">
-<div class="accent-bar"></div><div class="deco-line-l"></div><div class="deco-line-r"></div>
+
+<svg style="position:absolute;top:0;left:0;width:1080px;height:1440px;z-index:0;pointer-events:none" viewBox="0 0 1080 1440">
+  <defs><radialGradient id="y2g" cx="0.5" cy="0.45" r="0.35"><stop offset="0%" stop-color="#3a6a8a" stop-opacity="0.06"/><stop offset="100%" stop-color="transparent"/></radialGradient></defs>
+  <rect x="0" y="0" width="1080" height="1440" fill="url(#y2g)"/>
+  <!-- Vertical precision lines -->
+  <line x1="60" y1="200" x2="60" y2="350" stroke="#3a6a8a" stroke-width="1.5" opacity="0.12"/>
+  <circle cx="60" cy="200" r="3" fill="#3a6a8a" opacity="0.2"/>
+  <line x1="1020" y1="200" x2="1020" y2="350" stroke="#3a6a8a" stroke-width="1.5" opacity="0.12"/>
+  <circle cx="1020" cy="200" r="3" fill="#3a6a8a" opacity="0.2"/>
+  <!-- Cross marks -->
+  <g opacity="0.1" stroke="#3a6a8a" stroke-width="1.5">
+    <line x1="960" y1="1100" x2="960" y2="1136"/><line x1="942" y1="1118" x2="978" y2="1118"/>
+  </g>
+  <!-- Corner frame lines -->
+  <path d="M40 40 L40 100 M40 40 L100 40" stroke="#3a6a8a" stroke-width="1" opacity="0.06" fill="none"/>
+  <path d="M1040 40 L1040 100 M1040 40 L980 40" stroke="#3a6a8a" stroke-width="1" opacity="0.06" fill="none"/>
+  <path d="M40 1400 L40 1340 M40 1400 L100 1400" stroke="#3a6a8a" stroke-width="1" opacity="0.06" fill="none"/>
+  <path d="M1040 1400 L1040 1340 M1040 1400 L980 1400" stroke="#3a6a8a" stroke-width="1" opacity="0.06" fill="none"/>
+</svg>
+
+<div class="accent-bar"></div>
 <div style="position:absolute;top:24px;left:60px;z-index:20;display:flex;align-items:center;gap:8px"><div style="width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.05);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px;color:rgba(255,255,255,0.15)">L</div><div style="font-size:9px;color:rgba(255,255,255,0.1);letter-spacing:2px;text-transform:uppercase;font-weight:600">Practice Logo</div></div>
 <div class="content">
 <div class="camp">Dr. C. Yang · High-Expertise Clinical Ortho</div>

@@ -13,7 +13,18 @@
 .deco-orb{position:absolute;top:300px;left:50%;transform:translateX(-50%);width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(139,109,181,0.05),transparent 70%);z-index:1}
 .deco-ring{position:absolute;top:100px;right:80px;width:100px;height:100px;border-radius:50%;border:1px solid rgba(139,109,181,0.06);z-index:1}
 </style></head><body><div class="ad">
-<div class="deco-orb"></div><div class="deco-ring"></div>
+
+<svg style="position:absolute;top:0;left:0;width:1080px;height:1440px;z-index:0;pointer-events:none" viewBox="0 0 1080 1440">
+  <defs><radialGradient id="c2g" cx="0.5" cy="0.5" r="0.4"><stop offset="0%" stop-color="#8b6db5" stop-opacity="0.06"/><stop offset="100%" stop-color="transparent"/></radialGradient></defs>
+  <ellipse cx="540" cy="700" rx="400" ry="500" fill="url(#c2g)"/>
+  <line x1="490" y1="780" x2="590" y2="780" stroke="#8b6db5" stroke-width="1.5" opacity="0.2"/>
+  <circle cx="900" cy="200" r="80" fill="none" stroke="#8b6db5" stroke-width="1.5" opacity="0.06"/>
+  <circle cx="180" cy="1300" r="60" fill="none" stroke="#8b6db5" stroke-width="1" opacity="0.05"/>
+  <circle cx="100" cy="400" r="4" fill="#8b6db5" opacity="0.12"/><circle cx="116" cy="400" r="3" fill="#8b6db5" opacity="0.08"/>
+  <circle cx="100" cy="416" r="3" fill="#8b6db5" opacity="0.08"/>
+</svg>
+
+
 <div style="position:absolute;top:24px;right:30px;z-index:20;display:flex;align-items:center;gap:8px"><div style="width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px;color:rgba(255,255,255,0.2)">L</div><div style="font-size:9px;color:rgba(255,255,255,0.15);letter-spacing:2px;text-transform:uppercase;font-weight:600">Practice Logo</div></div>
 <div class="photo"><div class="pl"><svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="0.6"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg><span>Insert Photo</span></div>
 <div style="position:absolute;bottom:60px;left:30px;z-index:3;background:rgba(0,0,0,0.4);backdrop-filter:blur(6px);border-radius:8px;padding:8px 12px;font-family:'DM Sans',sans-serif;font-size:10px;color:rgba(255,255,255,0.5);max-width:280px;line-height:1.5"><strong style="color:rgba(255,255,255,0.7)">📷</strong> Calm consultation - doctor and adult patient in modern interior</div>

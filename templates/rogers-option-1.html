@@ -24,9 +24,23 @@
 .deco-dots{position:absolute;bottom:130px;right:50px;display:grid;grid-template-columns:repeat(4,8px);gap:6px;z-index:1}.deco-dots span{width:8px;height:8px;border-radius:50%;background:rgba(192,120,48,0.1)}
 .deco-ring{position:absolute;bottom:300px;right:-40px;width:200px;height:200px;border-radius:50%;border:2px solid rgba(192,120,48,0.06);z-index:1}
 </style></head><body><div class="ad">
+
+<svg style="position:absolute;top:0;left:0;width:1080px;height:1440px;z-index:0;pointer-events:none" viewBox="0 0 1080 1440">
+  <defs><radialGradient id="rg1" cx="0.2" cy="0.3" r="0.5"><stop offset="0%" stop-color="#c07830" stop-opacity="0.06"/><stop offset="100%" stop-color="transparent"/></radialGradient></defs>
+  <rect x="0" y="0" width="1080" height="1440" fill="url(#rg1)"/>
+  <circle cx="950" cy="200" r="120" fill="none" stroke="#c07830" stroke-width="2" opacity="0.1"/>
+  <circle cx="950" cy="200" r="80" fill="none" stroke="#c07830" stroke-width="1.5" opacity="0.07"/>
+  <circle cx="950" cy="200" r="40" fill="none" stroke="#c07830" stroke-width="1" opacity="0.05"/>
+  <circle cx="980" cy="900" r="5" fill="#c07830" opacity="0.2"/><circle cx="998" cy="900" r="5" fill="#c07830" opacity="0.15"/><circle cx="1016" cy="900" r="5" fill="#c07830" opacity="0.1"/><circle cx="1034" cy="900" r="5" fill="#c07830" opacity="0.07"/>
+  <circle cx="980" cy="918" r="5" fill="#c07830" opacity="0.15"/><circle cx="998" cy="918" r="5" fill="#c07830" opacity="0.1"/><circle cx="1016" cy="918" r="5" fill="#c07830" opacity="0.07"/><circle cx="1034" cy="918" r="5" fill="#c07830" opacity="0.05"/>
+  <circle cx="980" cy="936" r="5" fill="#c07830" opacity="0.1"/><circle cx="998" cy="936" r="5" fill="#c07830" opacity="0.07"/><circle cx="1016" cy="936" r="5" fill="#c07830" opacity="0.05"/>
+  <path d="M380 1440 Q540 1350 1080 1400" stroke="#c07830" stroke-width="1.5" fill="none" opacity="0.06"/>
+  <path d="M380 1440 Q560 1370 1080 1430" stroke="#c07830" stroke-width="1" fill="none" opacity="0.04"/>
+</svg>
+
 <div class="curve"></div>
 <div class="deco-dots"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
-<div class="deco-ring"></div>
+
 <div class="circles">
 <div class="circ"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="0.8"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg><span>Photo 1</span></div>
 <div class="circ"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="0.8"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg><span>Photo 2</span></div>
