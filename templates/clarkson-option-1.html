@@ -1,24 +1,25 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=1080">
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet"><title>Dr. K. Clarkson · Option 1</title><style>
+<title>Dr. K. Clarkson · Option 1</title><link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
 *{margin:0;padding:0;box-sizing:border-box}body{width:1080px;height:1440px;overflow:hidden}
 .ad{width:1080px;height:1440px;position:relative;overflow:hidden;background:#f8f6f4;font-family:'Plus Jakarta Sans',sans-serif}
-.split{position:absolute;top:0;left:0;right:0;bottom:200px;display:flex}
-.left{width:540px;padding:80px 50px 50px;display:flex;flex-direction:column;justify-content:center}
-.right{flex:1;background:linear-gradient(150deg,#d8d4d0,#c0bab4);position:relative;overflow:hidden}
-.right .pl{width:100%;height:100%;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:10px}
-.right .pl svg{opacity:0.06}.right .pl span{font-size:9px;color:rgba(0,0,0,0.06);letter-spacing:3px;text-transform:uppercase;font-weight:700}
-.camp{font-size:10px;font-weight:700;color:#b0a8a0;letter-spacing:3px;text-transform:uppercase;margin-bottom:28px}
-.hl{font-family:'Playfair Display',serif;font-weight:700;font-size:54px;color:#1a1a1a;line-height:1.1;letter-spacing:-0.5px;margin-bottom:18px;font-style:italic}
-.rule{width:60px;height:2px;background:#999;margin-bottom:18px}
-.sub{font-family:'DM Sans',sans-serif;font-size:17px;color:#888;line-height:1.65;margin-bottom:28px}
-.offer{display:inline-flex;align-items:center;gap:10px;border:1.5px solid #ccc;border-radius:8px;padding:14px 22px}
-.offer .ic{font-size:18px}.offer .lb{font-weight:600;font-size:12px;color:#999;letter-spacing:1px;text-transform:uppercase}
+.split{position:absolute;top:0;left:0;right:0;bottom:120px;display:flex}
+.left{width:540px;padding:80px 50px 50px;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden}
+.right{flex:1;background:linear-gradient(150deg,#d8d4d0,#c0bab4);position:relative;overflow:hidden}.right .pl{width:100%;height:100%;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:10px}.right .pl svg{opacity:0.06}.right .pl span{font-size:9px;color:rgba(0,0,0,0.06);letter-spacing:3px;text-transform:uppercase;font-weight:700}
+.camp{font-size:10px;font-weight:700;color:#b0a8a0;letter-spacing:3px;text-transform:uppercase;margin-bottom:28px;position:relative;z-index:2}
+.hl{font-family:'Playfair Display',serif;font-weight:700;font-size:52px;color:#1a1a1a;line-height:1.1;letter-spacing:-0.5px;margin-bottom:18px;position:relative;z-index:2}.hl .accent{color:#8b6db5;font-style:italic}
+.rule{width:60px;height:2px;background:linear-gradient(90deg,#8b6db5,#c0b0d0);margin-bottom:18px;position:relative;z-index:2}
+.sub{font-family:'DM Sans',sans-serif;font-size:18px;color:#888;line-height:1.65;margin-bottom:28px;position:relative;z-index:2}
+.offer{display:inline-flex;align-items:center;gap:10px;border:1.5px solid #ccc;border-radius:8px;padding:14px 22px;position:relative;z-index:2}.offer .ic{font-size:18px}.offer .lb{font-weight:600;font-size:12px;color:#999;letter-spacing:1px;text-transform:uppercase}
+.deco-blob{position:absolute;bottom:-100px;left:-80px;width:350px;height:350px;border-radius:50%;background:radial-gradient(circle,rgba(139,109,181,0.06),transparent 70%);z-index:1}
+.deco-line{position:absolute;left:50px;top:60px;width:1px;height:80px;background:linear-gradient(to bottom,rgba(139,109,181,0.15),transparent);z-index:1}
 </style></head><body><div class="ad">
 <div style="position:absolute;top:30px;left:50px;z-index:20;display:flex;align-items:center;gap:10px"><div style="width:40px;height:40px;border-radius:8px;background:rgba(0,0,0,0.04);border:1px solid rgba(0,0,0,0.06);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px;color:rgba(0,0,0,0.2)">L</div><div style="font-size:10px;color:rgba(0,0,0,0.2);letter-spacing:2px;text-transform:uppercase;font-weight:600">Practice Logo</div></div>
 <div class="split">
 <div class="left">
+<div class="deco-blob"></div><div class="deco-line"></div>
 <div class="camp">Adult Cosmetic · End of School</div>
-<div class="hl">This Summer, Let Your Smile Do the Talking</div>
+<div class="hl">This Summer, Let Your <span class="accent">Smile</span> Do the Talking</div>
 <div class="rule"></div>
 <div class="sub">Start now and step into summer with the confidence you've been putting off.</div>
 <div class="offer"><div class="ic">🏷️</div><div class="lb">Client-Specific Offer</div></div>
@@ -26,6 +27,6 @@
 <div class="right"><div class="pl"><svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#aaa" stroke-width="0.7"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg><span>Insert Photo</span></div>
 <div style="position:absolute;bottom:14px;left:14px;right:14px;background:rgba(0,0,0,0.4);backdrop-filter:blur(6px);border-radius:8px;padding:8px 12px;font-family:'DM Sans',sans-serif;font-size:10px;color:rgba(255,255,255,0.6);line-height:1.5"><strong style="color:rgba(255,255,255,0.85)">📷</strong> Professional adult (30s) smiling naturally in lifestyle setting</div>
 </div></div>
-<div style="position:absolute;bottom:195px;left:44px;right:44px;font-family:'DM Sans',sans-serif"><div style="padding:12px 0;border-bottom:1px solid rgba(128,128,128,0.15)"><span style="font-size:9px;font-weight:700;color:#888;letter-spacing:2px;text-transform:uppercase">Patient Mindset</span><div style="font-style:italic;font-size:12px;color:#888;margin-top:4px;line-height:1.5">"I want to feel more confident in photos." · "Now might be the right time."</div></div><div style="padding:10px 0;border-bottom:1px solid rgba(128,128,128,0.15);display:flex;align-items:center;gap:10px"><span style="font-size:9px;font-weight:700;color:#888;letter-spacing:2px;text-transform:uppercase;flex-shrink:0">Audience</span><span style="font-size:11px;color:#888">Adults 25-55 · Working professionals · Image-conscious</span></div><div style="padding:10px 0;border-bottom:1px solid rgba(128,128,128,0.15);display:flex;align-items:flex-start;gap:8px"><span style="font-size:12px;flex-shrink:0">⚠️</span><span style="font-size:10px;color:#c88;line-height:1.5">No children or teens · No school references · No price badges · No glam influencer styling</span></div><div style="padding:10px 0"><span style="font-size:9px;font-weight:700;color:#888;letter-spacing:2px;text-transform:uppercase">Suggested Overlay</span><div style="font-style:italic;font-size:13px;color:#888;margin-top:3px;opacity:0.8">"Start Before Summer. Smile With Confidence."</div></div></div>
-<div style="position:absolute;bottom:52px;left:50px;right:50px;display:flex;align-items:center;justify-content:space-between"><div style="background:#1a1a1a;color:white;font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:14px;padding:16px 38px;border-radius:50px;text-transform:uppercase;letter-spacing:0.5px">Start Your Transformation →</div><div style="text-align:right"><div style="font-size:9px;color:#bbb;letter-spacing:2px;text-transform:uppercase;font-weight:600;font-family:'Plus Jakarta Sans',sans-serif;margin-bottom:2px">Call or Text</div><div style="font-weight:800;font-size:20px;color:#555;font-family:'Plus Jakarta Sans',sans-serif">(000) 000-0000</div></div></div>
-<div style="position:absolute;bottom:0;left:0;right:0;height:38px;background:#1a1a1a;display:flex;align-items:center;justify-content:center;gap:12px;font-family:'Plus Jakarta Sans',sans-serif"><span style="font-size:9px;color:rgba(255,255,255,0.3);letter-spacing:1.5px;text-transform:uppercase">Dr. K. Clarkson</span><span style="width:3px;height:3px;border-radius:50%;background:rgba(255,255,255,0.15);display:inline-block"></span><span style="font-size:9px;color:rgba(255,255,255,0.3);letter-spacing:1.5px;text-transform:uppercase">Adult Cosmetic-Focused Aesthetic Ortho</span></div></div></body></html>
+<div style="position:absolute;bottom:0;left:0;right:0;height:120px;display:flex;align-items:center;justify-content:space-between;padding:0 50px;border-top:1px solid #eee;background:white"><div style="background:#1a1a1a;color:white;font-weight:800;font-size:15px;padding:18px 42px;border-radius:50px;text-transform:uppercase;letter-spacing:0.5px;border:none">Start Your Transformation →</div><div style="text-align:right"><div style="font-size:9px;color:#bbb;letter-spacing:2px;text-transform:uppercase;font-weight:600;margin-bottom:2px">Call or Text</div><div style="font-weight:800;font-size:22px;color:#555">(000) 000-0000</div></div></div>
+<div style="position:absolute;bottom:0;left:0;right:0;height:38px;background:#111;display:flex;align-items:center;justify-content:center;gap:12px;font-family:'Plus Jakarta Sans',sans-serif"><span style="font-size:9px;color:rgba(255,255,255,0.25);letter-spacing:1.5px;text-transform:uppercase">Dr. K. Clarkson</span><span style="width:3px;height:3px;border-radius:50%;background:rgba(255,255,255,0.12);display:inline-block"></span><span style="font-size:9px;color:rgba(255,255,255,0.25);letter-spacing:1.5px;text-transform:uppercase">Adult Cosmetic Aesthetic Ortho</span></div>
+</div></body></html>

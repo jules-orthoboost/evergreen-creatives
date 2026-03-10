@@ -1,110 +1,58 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=1080">
 <title>Dr. A. Joe · Option 1</title>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{width:1080px;height:1440px;overflow:hidden}
+*{margin:0;padding:0;box-sizing:border-box}body{width:1080px;height:1440px;overflow:hidden}
 .ad{width:1080px;height:1440px;position:relative;overflow:hidden;background:#fafafa;font-family:'Plus Jakarta Sans',sans-serif}
-
-/* TOP BAR - logo + persona */
 .top{position:absolute;top:0;left:0;right:0;height:72px;background:#1a1a1a;display:flex;align-items:center;justify-content:space-between;padding:0 40px;z-index:20}
 .top .logo-slot{display:flex;align-items:center;gap:10px}
 .top .logo-box{width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px;color:rgba(255,255,255,0.6)}
 .top .logo-lbl{font-size:10px;color:rgba(255,255,255,0.4);letter-spacing:2px;text-transform:uppercase;font-weight:600}
 .top .camp{font-size:9px;color:rgba(255,255,255,0.35);letter-spacing:1.5px;text-transform:uppercase;font-weight:700}
-
-/* MAIN SPLIT - offer left, photo right */
-.split{position:absolute;top:72px;left:0;right:0;height:680px;display:flex}
-.offer-side{width:480px;background:#f2f2f2;padding:60px 44px;display:flex;flex-direction:column;justify-content:center}
+.split{position:absolute;top:72px;left:0;right:0;height:750px;display:flex}
+.offer-side{width:500px;background:#f2f2f2;padding:60px 48px;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden}
 .photo-side{flex:1;background:linear-gradient(150deg,#d8d8d8,#bbb);position:relative;overflow:hidden}
 .photo-side .pl{width:100%;height:100%;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:10px}
-.photo-side .pl svg{opacity:0.1}
-.photo-side .pl span{font-size:9px;color:rgba(0,0,0,0.1);letter-spacing:3px;text-transform:uppercase;font-weight:700}
-.photo-dir{position:absolute;bottom:14px;left:14px;right:14px;background:rgba(0,0,0,0.5);backdrop-filter:blur(6px);border-radius:8px;padding:10px 14px;font-family:'DM Sans',sans-serif;font-size:10px;color:rgba(255,255,255,0.6);line-height:1.5}
-.photo-dir strong{color:rgba(255,255,255,0.85)}
-
-/* OFFER CONTENT */
-.offer-tag{font-size:10px;font-weight:700;color:#888;letter-spacing:2px;text-transform:uppercase;margin-bottom:20px}
-.offer-badge{width:220px;height:220px;border-radius:50%;border:4px dashed #aaa;display:flex;align-items:center;justify-content:center;flex-direction:column;margin-bottom:28px}
-.offer-badge .ic{font-size:28px;margin-bottom:4px}
-.offer-badge .lb{font-weight:800;font-size:16px;color:#555;letter-spacing:1px;text-transform:uppercase;text-align:center;line-height:1.3}
-.offer-badge .sm{font-family:'DM Sans',sans-serif;font-size:11px;color:#999;margin-top:4px}
-.headline{font-weight:800;font-size:44px;color:#1a1a1a;line-height:1.08;letter-spacing:-1.5px;margin-bottom:12px}
-.sub{font-family:'DM Sans',sans-serif;font-weight:400;font-size:17px;color:#777;line-height:1.6}
-
-/* CHECKLIST SECTION */
-.checks{position:absolute;top:752px;left:0;right:0;padding:32px 44px;display:flex;gap:0;border-top:1px solid #e8e8e8;border-bottom:1px solid #e8e8e8;background:white}
-.chk{flex:1;display:flex;align-items:flex-start;gap:12px;padding:0 20px}
-.chk+.chk{border-left:1px solid #eee}
-.chk:first-child{padding-left:0}
-.chk-ic{width:30px;height:30px;flex-shrink:0;border-radius:50%;border:2px solid #aaa;display:flex;align-items:center;justify-content:center;margin-top:2px}
-.chk-ic svg{width:14px;height:14px}
-.chk-t{font-weight:700;font-size:13px;color:#333;line-height:1.3;margin-bottom:2px}
-.chk-s{font-family:'DM Sans',sans-serif;font-size:11px;color:#999;line-height:1.4}
-
-/* MINDSET */
-.mindset{position:absolute;top:870px;left:44px;right:44px;padding:20px 0;border-bottom:1px solid #eee}
-.mindset-lbl{font-size:9px;font-weight:700;color:#bbb;letter-spacing:2px;text-transform:uppercase;margin-bottom:6px}
-.mindset-txt{font-family:'DM Sans',sans-serif;font-style:italic;font-size:13px;color:#999;line-height:1.6}
-
-/* AUDIENCE */
-.audience{position:absolute;top:970px;left:44px;right:44px;padding:16px 0;border-bottom:1px solid #eee;display:flex;align-items:center;gap:12px}
-.aud-lbl{font-size:9px;font-weight:700;color:#bbb;letter-spacing:2px;text-transform:uppercase;flex-shrink:0}
-.aud-txt{font-family:'DM Sans',sans-serif;font-size:12px;color:#999}
-
-/* DO NOT SHOW */
-.donot{position:absolute;top:1030px;left:44px;right:44px;background:#fef5f5;border:1px solid #f5dede;border-radius:10px;padding:12px 16px;display:flex;align-items:flex-start;gap:8px}
-.donot .ic{font-size:13px;flex-shrink:0;margin-top:1px}
-.donot .txt{font-family:'DM Sans',sans-serif;font-size:10px;color:#c88;line-height:1.5}
-
-/* OVERLAY IDEA */
-.overlay{position:absolute;top:1110px;left:44px;right:44px;padding:14px 0}
-.overlay-lbl{font-size:9px;font-weight:700;color:#bbb;letter-spacing:2px;text-transform:uppercase;margin-bottom:4px}
-.overlay-txt{font-family:'DM Sans',sans-serif;font-size:14px;color:#666;font-style:italic}
-
-/* CTA */
-.cta{position:absolute;bottom:60px;left:44px;right:44px;display:flex;align-items:center;justify-content:space-between}
-.cta-btn{background:#1a1a1a;color:white;font-weight:800;font-size:16px;padding:18px 44px;border-radius:50px;text-transform:uppercase;letter-spacing:0.5px;border:none}
-.cta-r{text-align:right}
-.cta-ph-l{font-size:9px;color:#bbb;letter-spacing:2px;text-transform:uppercase;font-weight:600;margin-bottom:2px}
-.cta-ph{font-weight:800;font-size:22px;color:#333}
-
-/* FOOTER */
-.foot{position:absolute;bottom:0;left:0;right:0;height:40px;background:#1a1a1a;display:flex;align-items:center;justify-content:center;gap:12px}
-.foot span{font-size:9px;color:rgba(255,255,255,0.3);letter-spacing:1.5px;text-transform:uppercase}
-.foot .s{width:3px;height:3px;border-radius:50%;background:rgba(255,255,255,0.15)}
+.photo-side .pl svg{opacity:0.1}.photo-side .pl span{font-size:9px;color:rgba(0,0,0,0.1);letter-spacing:3px;text-transform:uppercase;font-weight:700}
+.photo-dir{position:absolute;bottom:14px;left:14px;right:14px;background:rgba(0,0,0,0.5);backdrop-filter:blur(6px);border-radius:8px;padding:10px 14px;font-family:'DM Sans',sans-serif;font-size:10px;color:rgba(255,255,255,0.6);line-height:1.5}.photo-dir strong{color:rgba(255,255,255,0.85)}
+.offer-tag{font-size:10px;font-weight:700;color:#999;letter-spacing:2px;text-transform:uppercase;margin-bottom:24px}
+.offer-badge{width:200px;height:200px;border-radius:50%;border:3px dashed #bbb;display:flex;align-items:center;justify-content:center;flex-direction:column;margin-bottom:32px;position:relative;z-index:2}
+.offer-badge .ic{font-size:28px;margin-bottom:4px}.offer-badge .lb{font-weight:800;font-size:15px;color:#666;letter-spacing:1px;text-transform:uppercase;text-align:center;line-height:1.3}
+.headline{font-weight:800;font-size:48px;color:#1a1a1a;line-height:1.08;letter-spacing:-1.5px;margin-bottom:14px;position:relative;z-index:2}
+.headline .accent{font-family:'Playfair Display',serif;font-style:italic;color:#c8960a}
+.sub{font-family:'DM Sans',sans-serif;font-weight:400;font-size:18px;color:#777;line-height:1.6;position:relative;z-index:2}
+.checks{position:absolute;top:822px;left:0;right:0;padding:32px 44px;display:flex;gap:0;border-top:1px solid #e8e8e8;background:white}
+.chk{flex:1;display:flex;align-items:flex-start;gap:12px;padding:0 20px}.chk+.chk{border-left:1px solid #eee}.chk:first-child{padding-left:0}
+.chk-ic{width:32px;height:32px;flex-shrink:0;border-radius:50%;background:#fdf3d7;display:flex;align-items:center;justify-content:center;margin-top:2px}
+.chk-ic svg{width:16px;height:16px}
+.chk-t{font-weight:700;font-size:14px;color:#333;line-height:1.3;margin-bottom:2px}.chk-s{font-family:'DM Sans',sans-serif;font-size:11px;color:#aaa;line-height:1.4}
+.cta{position:absolute;bottom:56px;left:44px;right:44px;display:flex;align-items:center;justify-content:space-between}
+.cta-btn{background:#1a1a1a;color:white;font-weight:800;font-size:17px;padding:20px 48px;border-radius:50px;text-transform:uppercase;letter-spacing:0.5px;border:none}
+.cta-r{text-align:right}.cta-ph-l{font-size:9px;color:#bbb;letter-spacing:2px;text-transform:uppercase;font-weight:600;margin-bottom:2px}.cta-ph{font-weight:800;font-size:24px;color:#333}
+/* DECORATIVE */
+.deco-orb{position:absolute;width:350px;height:350px;border-radius:50%;background:radial-gradient(circle,rgba(200,150,10,0.08),transparent 70%);top:-80px;right:-100px;z-index:1}
+.deco-lines{position:absolute;bottom:0;left:0;width:100%;height:300px;background:repeating-linear-gradient(135deg,transparent,transparent 18px,rgba(0,0,0,0.015) 18px,rgba(0,0,0,0.015) 19px);z-index:0}
+.deco-dots{position:absolute;top:60px;right:40px;display:grid;grid-template-columns:repeat(3,8px);gap:6px;z-index:1}.deco-dots span{width:8px;height:8px;border-radius:50%;background:rgba(200,150,10,0.12)}
 </style></head><body><div class="ad">
-
-<div class="top">
-<div class="logo-slot"><div class="logo-box">L</div><div class="logo-lbl">Practice Logo</div></div>
-<div class="camp">End of School · Dr. A. Joe</div>
-</div>
-
+<div class="top"><div class="logo-slot"><div class="logo-box">L</div><div class="logo-lbl">Practice Logo</div></div><div class="camp">End of School · Dr. A. Joe</div></div>
 <div class="split">
 <div class="offer-side">
+<div class="deco-orb"></div><div class="deco-lines"></div>
+<div class="deco-dots"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
 <div class="offer-tag">Budget-Friendly Everyday Ortho</div>
-<div class="offer-badge"><div class="ic">🏷️</div><div class="lb">Client<br>Offer<br>Here</div><div class="sm">Custom promotion</div></div>
-<div class="headline">Before Summer Break = Best Time to Start</div>
+<div class="offer-badge"><div class="ic">🏷️</div><div class="lb">Client<br>Offer<br>Here</div></div>
+<div class="headline"><span class="accent">Before Summer</span><br>Break = Best<br>Time to Start</div>
 <div class="sub">Payment plans built for real families. Get ahead of the rush.</div>
 </div>
-<div class="photo-side">
-<div class="pl"><svg width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="0.7"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg><span>Insert Photo</span></div>
-<div class="photo-dir"><strong>📷 Photo:</strong> Parent + child in bright office, reviewing a plan on tablet</div>
+<div class="photo-side"><div class="pl"><svg width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="0.7"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg><span>Insert Photo</span></div>
+<div class="photo-dir"><strong>📷</strong> Parent + child in bright office, reviewing a plan on tablet</div></div>
 </div>
-</div>
-
 <div class="checks">
-<div class="chk"><div class="chk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="2.5" stroke-linecap="round"><path d="M9 12l2 2 4-4"/></svg></div><div><div class="chk-t">Free Consultation</div><div class="chk-s">No cost, no pressure</div></div></div>
-<div class="chk"><div class="chk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="2.5" stroke-linecap="round"><path d="M9 12l2 2 4-4"/></svg></div><div><div class="chk-t">Flexible Payments</div><div class="chk-s">Monthly plans that fit</div></div></div>
-<div class="chk"><div class="chk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="2.5" stroke-linecap="round"><path d="M9 12l2 2 4-4"/></svg></div><div><div class="chk-t">Clear Pricing</div><div class="chk-s">No hidden costs</div></div></div>
-<div class="chk"><div class="chk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="2.5" stroke-linecap="round"><path d="M9 12l2 2 4-4"/></svg></div><div><div class="chk-t">Easy Scheduling</div><div class="chk-s">Quick, convenient visits</div></div></div>
+<div class="chk"><div class="chk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#c8960a" stroke-width="2.5" stroke-linecap="round"><path d="M9 12l2 2 4-4"/></svg></div><div><div class="chk-t">Free Consultation</div><div class="chk-s">No cost, no pressure</div></div></div>
+<div class="chk"><div class="chk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#c8960a" stroke-width="2.5" stroke-linecap="round"><path d="M9 12l2 2 4-4"/></svg></div><div><div class="chk-t">Flexible Payments</div><div class="chk-s">Monthly plans that fit</div></div></div>
+<div class="chk"><div class="chk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#c8960a" stroke-width="2.5" stroke-linecap="round"><path d="M9 12l2 2 4-4"/></svg></div><div><div class="chk-t">Clear Pricing</div><div class="chk-s">No hidden costs</div></div></div>
+<div class="chk"><div class="chk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#c8960a" stroke-width="2.5" stroke-linecap="round"><path d="M9 12l2 2 4-4"/></svg></div><div><div class="chk-t">Easy Scheduling</div><div class="chk-s">Book in minutes</div></div></div>
 </div>
-
-<div class="mindset"><div class="mindset-lbl">Patient Mindset</div><div class="mindset-txt">"What will this cost monthly?" · "Can we make this work without stretching our budget?"</div></div>
-<div class="audience"><div class="aud-lbl">Audience</div><div class="aud-txt">Parents 30-45 · Middle-income · Cost-conscious · Comparing 2-3 orthos</div></div>
-<div class="donot"><div class="ic">⚠️</div><div class="txt">No glam closeups · No clinical imagery · No flashy discounts · No luxury styling</div></div>
-<div class="overlay"><div class="overlay-lbl">Suggested Overlay</div><div class="overlay-txt">"Affordable Braces Before School's Out"</div></div>
-
 <div class="cta"><div class="cta-btn">Book Your Free Consultation →</div><div class="cta-r"><div class="cta-ph-l">Call or Text</div><div class="cta-ph">(000) 000-0000</div></div></div>
-<div class="foot"><span>Dr. A. Joe</span><div class="s"></div><span>Budget-Friendly Everyday Ortho</span><div class="s"></div><span>End of School</span></div>
+<div style="position:absolute;bottom:0;left:0;right:0;height:38px;background:#111;display:flex;align-items:center;justify-content:center;gap:12px;font-family:'Plus Jakarta Sans',sans-serif"><span style="font-size:9px;color:rgba(255,255,255,0.25);letter-spacing:1.5px;text-transform:uppercase">Dr. A. Joe</span><span style="width:3px;height:3px;border-radius:50%;background:rgba(255,255,255,0.12);display:inline-block"></span><span style="font-size:9px;color:rgba(255,255,255,0.25);letter-spacing:1.5px;text-transform:uppercase">Budget-Friendly Everyday Ortho</span></div>
 </div></body></html>
