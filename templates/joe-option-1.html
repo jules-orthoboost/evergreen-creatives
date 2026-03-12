@@ -21,9 +21,12 @@
 .chk{flex:1;display:flex;align-items:center;gap:14px;padding:0 20px}.chk+.chk{border-left:1px solid #eee}.chk:first-child{padding-left:0}
 .chk-ic{width:44px;height:44px;flex-shrink:0;border-radius:50%;background:#fdf3d7;display:flex;align-items:center;justify-content:center}.chk-ic svg{width:22px;height:22px}
 .chk-t{font-weight:800;font-size:16px;color:#222;margin-bottom:3px}.chk-s{font-family:'DM Sans',sans-serif;font-size:13px;color:#aaa}
-.cta{position:absolute;bottom:0;left:0;right:0;height:150px;background:#1a1a1a;display:flex;align-items:center;justify-content:space-between;padding:0 56px}
-.cta-btn{background:white;color:#1a1a1a;font-weight:800;font-size:20px;padding:22px 52px;border-radius:60px;text-transform:uppercase;letter-spacing:0.5px;border:none}
-.cta-r{text-align:right}.cta-ph-l{font-size:11px;color:rgba(255,255,255,0.4);letter-spacing:2px;text-transform:uppercase;font-weight:600;margin-bottom:4px}.cta-ph{font-weight:800;font-size:30px;color:white}
+.cta{position:absolute;bottom:0;left:0;right:0;height:150px;display:flex}
+.cta-left{flex:1;background:#1a1a1a;display:flex;align-items:center;justify-content:center}
+.cta-btn{background:#c8960a;color:white;font-weight:800;font-size:20px;padding:22px 48px;border-radius:60px;text-transform:uppercase;letter-spacing:0.5px;border:none}
+.cta-right{width:380px;background:#f7f0dd;display:flex;align-items:center;justify-content:center;gap:16px}
+.cta-ph-icon{font-size:28px}
+.cta-ph-block{}.cta-ph-l{font-size:10px;color:#b09050;letter-spacing:2px;text-transform:uppercase;font-weight:700;margin-bottom:2px}.cta-ph{font-weight:800;font-size:28px;color:#6a5020;letter-spacing:0.5px}
 </style></head><body><div class="ad">
 <svg style="position:absolute;top:0;left:0;width:540px;height:1130px;z-index:1;pointer-events:none" viewBox="0 0 540 1130">
 <circle cx="500" cy="100" r="200" fill="none" stroke="#c8960a" stroke-width="1.5" opacity="0.08"/>
@@ -49,5 +52,5 @@
 <div class="chk"><div class="chk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#c8960a" stroke-width="2.5" stroke-linecap="round"><path d="M9 12l2 2 4-4"/></svg></div><div><div class="chk-t">Clear Pricing</div><div class="chk-s">No hidden costs</div></div></div>
 <div class="chk"><div class="chk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#c8960a" stroke-width="2.5" stroke-linecap="round"><path d="M9 12l2 2 4-4"/></svg></div><div><div class="chk-t">Easy Booking</div><div class="chk-s">Book in minutes</div></div></div>
 </div>
-<div class="cta"><div class="cta-btn">Book Your Free Consultation →</div><div class="cta-r"><div class="cta-ph-l">Call or Text</div><div class="cta-ph">(000) 000-0000</div></div></div>
+<div class="cta"><div class="cta-left"><div class="cta-btn">Book Your Free Consultation →</div></div><div class="cta-right"><div class="cta-ph-icon">📞</div><div class="cta-ph-block"><div class="cta-ph-l">Call or Text</div><div class="cta-ph">(000) 000-0000</div></div></div></div>
 </div></body></html>

@@ -31,11 +31,13 @@ body{width:1080px;height:1440px;overflow:hidden}
 .gi .gs{font-family:'DM Sans',sans-serif;font-size:14px;color:#999}
 .gi::after{content:'';position:absolute;top:-30px;right:-30px;width:80px;height:80px;border-radius:50%;background:rgba(200,150,10,0.05)}
 
-.cta{position:absolute;bottom:0;left:0;right:0;height:150px;background:#1a1a1a;display:flex;align-items:center;justify-content:space-between;padding:0 56px}
-.cta-btn{background:white;color:#1a1a1a;font-weight:800;font-size:22px;padding:24px 56px;border-radius:60px;text-transform:uppercase;letter-spacing:0.5px;border:none}
-.cta-r{text-align:right}
-.cta-ph-l{font-size:11px;color:rgba(255,255,255,0.4);letter-spacing:2px;text-transform:uppercase;font-weight:600;margin-bottom:4px}
-.cta-ph{font-weight:800;font-size:32px;color:white;letter-spacing:0.5px}
+.cta{position:absolute;bottom:0;left:0;right:0;height:150px;background:#1a1a1a;display:flex;align-items:center;padding:0 56px;gap:32px}
+.cta-stripe{position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#c8960a,#e8c44a,#c8960a)}
+.cta-btn{background:#c8960a;color:white;font-weight:800;font-size:22px;padding:24px 56px;border-radius:60px;text-transform:uppercase;letter-spacing:0.5px;border:none;flex-shrink:0}
+.cta-sep{width:1px;height:50px;background:rgba(255,255,255,0.1)}
+.cta-r{display:flex;align-items:center;gap:14px}
+.cta-ph-l{font-size:10px;color:rgba(255,255,255,0.35);letter-spacing:2px;text-transform:uppercase;font-weight:600;margin-bottom:2px}
+.cta-ph{font-weight:800;font-size:30px;color:white;letter-spacing:0.5px}
 
 .logo{position:absolute;top:20px;left:24px;z-index:20;display:flex;align-items:center;gap:12px}
 .logo-box{width:44px;height:44px;border-radius:10px;background:rgba(255,255,255,0.15);border:1.5px solid rgba(255,255,255,0.25);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:16px;color:rgba(255,255,255,0.7);backdrop-filter:blur(8px)}
@@ -82,9 +84,6 @@ body{width:1080px;height:1440px;overflow:hidden}
   </div>
 </div>
 
-<div class="cta">
-  <div class="cta-btn">Start Today →</div>
-  <div class="cta-r"><div class="cta-ph-l">Call or Text</div><div class="cta-ph">(000) 000-0000</div></div>
-</div>
+<div class="cta"><div class="cta-stripe"></div><div class="cta-btn">Start Today →</div><div class="cta-sep"></div><div class="cta-r"><div><div class="cta-ph-l">Call or Text</div><div class="cta-ph">(000) 000-0000</div></div></div></div>
 
 </div></body></html>

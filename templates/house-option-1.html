@@ -17,9 +17,12 @@
 .bn{flex:1;text-align:center;padding:0 14px}
 .bn-ic{width:48px;height:48px;margin:0 auto 10px;border-radius:12px;background:rgba(42,138,106,0.06);display:flex;align-items:center;justify-content:center}.bn-ic svg{width:22px;height:22px}
 .bn-t{font-weight:800;font-size:16px;color:#222;margin-bottom:3px}.bn-s{font-family:'DM Sans',sans-serif;font-size:12px;color:#aaa}
-.cta{position:absolute;bottom:0;left:0;right:0;height:150px;background:#1a2a1a;display:flex;align-items:center;justify-content:space-between;padding:0 56px}
-.cta-btn{background:white;color:#1a2a1a;font-weight:800;font-size:20px;padding:22px 48px;border-radius:60px;text-transform:uppercase;letter-spacing:0.5px;border:none}
-.cta-r{text-align:right}.cta-ph-l{font-size:11px;color:rgba(255,255,255,0.4);letter-spacing:2px;text-transform:uppercase;font-weight:600;margin-bottom:4px}.cta-ph{font-weight:800;font-size:28px;color:white}
+.cta{position:absolute;bottom:0;left:0;right:0;height:150px;background:linear-gradient(135deg,#1a2a1a,#1a3a2a);display:flex;align-items:center;justify-content:space-between;padding:0 56px;overflow:hidden}
+.cta-btn{background:#2a8a6a;color:white;font-weight:800;font-size:18px;padding:22px 48px;border-radius:60px;text-transform:uppercase;letter-spacing:0.5px;border:none;position:relative;z-index:2}
+.cta-mid{display:flex;gap:6px;position:relative;z-index:2}
+.cta-dot{width:8px;height:8px;border-radius:50%;background:rgba(42,138,106,0.3)}
+.cta-r{text-align:right;position:relative;z-index:2}.cta-ph-l{font-size:10px;color:rgba(255,255,255,0.3);letter-spacing:2px;text-transform:uppercase;font-weight:600;margin-bottom:2px}.cta-ph{font-weight:800;font-size:26px;color:white}
+.cta-ring{position:absolute;right:-40px;top:-40px;width:200px;height:200px;border-radius:50%;border:1px solid rgba(42,138,106,0.1)}
 </style></head><body><div class="ad">
 <svg style="position:absolute;top:0;left:0;width:1080px;height:1440px;z-index:0;pointer-events:none" viewBox="0 0 1080 1440">
 <defs><radialGradient id="hg" cx="0.85" cy="0.1" r="0.3"><stop offset="0%" stop-color="#2a8a6a" stop-opacity="0.06"/><stop offset="100%" stop-color="transparent"/></radialGradient></defs>
@@ -46,5 +49,5 @@
 <div class="bn"><div class="bn-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#2a8a6a" stroke-width="2.5" stroke-linecap="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 000-7.78z"/></svg></div><div class="bn-t">Comfort-First</div><div class="bn-s">Family designed</div></div>
 <div class="bn"><div class="bn-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#2a8a6a" stroke-width="2.5" stroke-linecap="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div><div class="bn-t">Whole Family</div><div class="bn-s">One trusted provider</div></div>
 </div>
-<div class="cta"><div class="cta-btn">Reserve Your Appointment →</div><div class="cta-r"><div class="cta-ph-l">Call or Text</div><div class="cta-ph">(000) 000-0000</div></div></div>
+<div class="cta"><div class="cta-ring"></div><div class="cta-btn">Reserve Your Appointment →</div><div class="cta-mid"><div class="cta-dot"></div><div class="cta-dot"></div><div class="cta-dot"></div></div><div class="cta-r"><div class="cta-ph-l">Call or Text</div><div class="cta-ph">(000) 000-0000</div></div></div>
 </div></body></html>
