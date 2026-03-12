@@ -1,54 +1,90 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=1080">
-<title>Dr. A. Joe · Option 2</title><link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<title>Dr. A. Joe · Option 2</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
 <style>
-*{margin:0;padding:0;box-sizing:border-box}body{width:1080px;height:1440px;overflow:hidden}
-.ad{width:1080px;height:1440px;position:relative;overflow:hidden;background:#f7f7f7;font-family:'Plus Jakarta Sans',sans-serif}
-.photo{position:absolute;top:0;left:0;right:0;height:620px;background:linear-gradient(150deg,#d5d5d5,#b5b5b5);overflow:hidden}
-.photo .pl{width:100%;height:100%;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:10px}.photo .pl svg{opacity:0.08}.photo .pl span{font-size:9px;color:rgba(0,0,0,0.08);letter-spacing:3px;text-transform:uppercase;font-weight:700}
-.photo-dir{position:absolute;top:14px;right:14px;background:rgba(0,0,0,0.5);backdrop-filter:blur(6px);border-radius:8px;padding:8px 12px;font-family:'DM Sans',sans-serif;font-size:10px;color:rgba(255,255,255,0.6);max-width:280px;line-height:1.5}.photo-dir strong{color:rgba(255,255,255,0.85)}
-.banner{position:absolute;top:500px;left:0;right:0;background:#1a1a1a;padding:40px 48px;display:flex;align-items:center;justify-content:space-between;z-index:10}
-.banner .hl{font-weight:800;font-size:56px;color:white;letter-spacing:-1.5px;line-height:1.05}.banner .hl .accent{font-family:'Playfair Display',serif;font-style:italic;color:#e8c44a}
-.banner .offer{width:150px;height:150px;border-radius:50%;border:3px dashed rgba(232,196,74,0.4);display:flex;align-items:center;justify-content:center;flex-direction:column;flex-shrink:0}.banner .offer .ic{font-size:20px;margin-bottom:2px}.banner .offer .lb{font-size:10px;font-weight:700;color:rgba(255,255,255,0.5);letter-spacing:1px;text-transform:uppercase;text-align:center}
-.content{position:absolute;top:680px;left:0;right:0;padding:28px 48px}
-.sub{font-family:'DM Sans',sans-serif;font-size:22px;color:#444;line-height:1.55;margin-bottom:32px}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.gi{display:flex;align-items:center;gap:14px;padding:28px 24px;background:white;border:1px solid #eee;border-radius:16px;position:relative;overflow:hidden}
-.gi .ck{width:32px;height:32px;flex-shrink:0;border-radius:50%;background:#fdf3d7;display:flex;align-items:center;justify-content:center}.gi .ck svg{width:16px;height:16px}
-.gi .gt{font-weight:700;font-size:18px;color:#111}.gi .gs{font-family:'DM Sans',sans-serif;font-size:12px;color:#999;margin-top:3px}
-.gi::after{content:'';position:absolute;top:-20px;right:-20px;width:60px;height:60px;border-radius:50%;background:rgba(200,150,10,0.04)}
-.cta{position:absolute;bottom:0;left:0;right:0;padding:0 48px;height:130px;display:flex;align-items:center;justify-content:space-between;background:#1a1a1a}
-.cta-btn{background:white;color:#1a1a1a;font-weight:800;font-size:18px;padding:22px 52px;border-radius:50px;text-transform:uppercase;letter-spacing:0.5px;border:none}
-.cta-r{text-align:right}.cta-ph-l{font-size:9px;color:rgba(255,255,255,0.5);letter-spacing:2px;text-transform:uppercase;font-weight:600;margin-bottom:2px}.cta-ph{font-weight:800;font-size:26px;color:white}
-/* DECO */
-.deco-blob{position:absolute;top:620px;right:-60px;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(200,150,10,0.06),transparent 70%);z-index:0}
+*{margin:0;padding:0;box-sizing:border-box}
+body{width:1080px;height:1440px;overflow:hidden}
+.ad{width:1080px;height:1440px;position:relative;overflow:hidden;font-family:'Plus Jakarta Sans',sans-serif}
+
+.photo{position:absolute;top:0;left:0;right:0;height:580px;background:linear-gradient(160deg,#d0d0d0,#a8a8a8);overflow:hidden}
+.photo .pl{width:100%;height:100%;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:14px}
+.photo .pl svg{opacity:0.12}
+.photo .pl span{font-size:12px;color:rgba(0,0,0,0.12);letter-spacing:4px;text-transform:uppercase;font-weight:700}
+.photo-grad{position:absolute;bottom:0;left:0;right:0;height:200px;background:linear-gradient(to top,#1a1a1a,transparent)}
+.photo-dir{position:absolute;top:16px;right:16px;background:rgba(0,0,0,0.55);backdrop-filter:blur(8px);border-radius:10px;padding:10px 16px;font-family:'DM Sans',sans-serif;font-size:11px;color:rgba(255,255,255,0.65);max-width:300px;line-height:1.5;z-index:5}
+.photo-dir strong{color:rgba(255,255,255,0.9)}
+
+.banner{position:absolute;top:460px;left:0;right:0;height:240px;background:#1a1a1a;display:flex;align-items:center;justify-content:space-between;padding:0 64px;z-index:10}
+.banner .hl{font-weight:800;font-size:72px;color:white;letter-spacing:-2px;line-height:1.0}
+.banner .hl .accent{font-family:'Playfair Display',serif;font-style:italic;color:#e8c44a}
+.banner .offer{width:160px;height:160px;border-radius:50%;border:3px dashed rgba(232,196,74,0.5);display:flex;align-items:center;justify-content:center;flex-direction:column;flex-shrink:0}
+.banner .offer .ic{font-size:28px;margin-bottom:4px}
+.banner .offer .lb{font-size:12px;font-weight:800;color:rgba(255,255,255,0.5);letter-spacing:1.5px;text-transform:uppercase;text-align:center;line-height:1.3}
+
+.content{position:absolute;top:700px;left:0;right:0;bottom:150px;background:#f5f5f5;padding:40px 56px 0}
+.sub{font-family:'DM Sans',sans-serif;font-size:26px;color:#444;line-height:1.5;margin-bottom:40px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.gi{display:flex;align-items:center;gap:20px;padding:36px 32px;background:white;border-radius:20px;border:1px solid #e8e8e8;position:relative;overflow:hidden}
+.gi .ck{width:48px;height:48px;flex-shrink:0;border-radius:50%;background:#fdf3d7;display:flex;align-items:center;justify-content:center}
+.gi .ck svg{width:24px;height:24px}
+.gi .gt{font-weight:800;font-size:22px;color:#111;margin-bottom:4px}
+.gi .gs{font-family:'DM Sans',sans-serif;font-size:14px;color:#999}
+.gi::after{content:'';position:absolute;top:-30px;right:-30px;width:80px;height:80px;border-radius:50%;background:rgba(200,150,10,0.05)}
+
+.cta{position:absolute;bottom:0;left:0;right:0;height:150px;background:#1a1a1a;display:flex;align-items:center;justify-content:space-between;padding:0 56px}
+.cta-btn{background:white;color:#1a1a1a;font-weight:800;font-size:22px;padding:24px 56px;border-radius:60px;text-transform:uppercase;letter-spacing:0.5px;border:none}
+.cta-r{text-align:right}
+.cta-ph-l{font-size:11px;color:rgba(255,255,255,0.4);letter-spacing:2px;text-transform:uppercase;font-weight:600;margin-bottom:4px}
+.cta-ph{font-weight:800;font-size:32px;color:white;letter-spacing:0.5px}
+
+.logo{position:absolute;top:20px;left:24px;z-index:20;display:flex;align-items:center;gap:12px}
+.logo-box{width:44px;height:44px;border-radius:10px;background:rgba(255,255,255,0.15);border:1.5px solid rgba(255,255,255,0.25);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:16px;color:rgba(255,255,255,0.7);backdrop-filter:blur(8px)}
+.logo-lbl{font-size:11px;color:rgba(255,255,255,0.45);letter-spacing:2.5px;text-transform:uppercase;font-weight:600}
 </style></head><body><div class="ad">
 
-<svg style="position:absolute;top:0;left:0;width:1080px;height:660px;z-index:1;pointer-events:none" viewBox="0 0 1080 660">
-  <circle cx="900" cy="100" r="200" fill="none" stroke="#c8960a" stroke-width="1.5" opacity="0.08"/>
-  <circle cx="900" cy="100" r="140" fill="none" stroke="#c8960a" stroke-width="1" opacity="0.05"/>
-  <circle cx="80" cy="550" r="6" fill="#c8960a" opacity="0.2"/><circle cx="98" cy="550" r="6" fill="#c8960a" opacity="0.15"/><circle cx="116" cy="550" r="6" fill="#c8960a" opacity="0.1"/>
-  <circle cx="80" cy="568" r="6" fill="#c8960a" opacity="0.15"/><circle cx="98" cy="568" r="6" fill="#c8960a" opacity="0.1"/>
+<svg style="position:absolute;top:0;left:0;width:1080px;height:700px;z-index:1;pointer-events:none" viewBox="0 0 1080 700">
+  <circle cx="920" cy="80" r="220" fill="none" stroke="#c8960a" stroke-width="1.5" opacity="0.1"/>
+  <circle cx="920" cy="80" r="160" fill="none" stroke="#c8960a" stroke-width="1" opacity="0.06"/>
+  <circle cx="60" cy="520" r="8" fill="#c8960a" opacity="0.25"/><circle cx="82" cy="520" r="8" fill="#c8960a" opacity="0.18"/><circle cx="104" cy="520" r="8" fill="#c8960a" opacity="0.12"/>
+  <circle cx="60" cy="542" r="8" fill="#c8960a" opacity="0.18"/><circle cx="82" cy="542" r="8" fill="#c8960a" opacity="0.12"/>
 </svg>
-<svg style="position:absolute;bottom:148px;left:0;width:1080px;height:400px;z-index:0;pointer-events:none" viewBox="0 0 1080 400">
-  <defs><linearGradient id="j2g" x1="0" y1="0" x2="1" y2="0.5"><stop offset="0%" stop-color="#c8960a" stop-opacity="0.04"/><stop offset="100%" stop-color="transparent" stop-opacity="0"/></linearGradient></defs>
-  <rect x="0" y="0" width="1080" height="400" fill="url(#j2g)"/>
-  <line x1="900" y1="20" x2="900" y2="100" stroke="#c8960a" stroke-width="2" opacity="0.1"/>
-  <line x1="920" y1="40" x2="920" y2="80" stroke="#c8960a" stroke-width="1.5" opacity="0.07"/>
+<svg style="position:absolute;top:700px;left:0;width:1080px;height:740px;z-index:0;pointer-events:none" viewBox="0 0 1080 740">
+  <defs><linearGradient id="jbg" x1="0" y1="0" x2="1" y2="0.5"><stop offset="0%" stop-color="#c8960a" stop-opacity="0.04"/><stop offset="100%" stop-color="transparent"/></linearGradient></defs>
+  <rect x="0" y="0" width="1080" height="740" fill="url(#jbg)"/>
+  <line x1="980" y1="40" x2="980" y2="140" stroke="#c8960a" stroke-width="2.5" opacity="0.12"/>
+  <line x1="1010" y1="60" x2="1010" y2="110" stroke="#c8960a" stroke-width="2" opacity="0.08"/>
+  <rect x="900" y="500" width="120" height="120" rx="16" fill="none" stroke="#c8960a" stroke-width="1.5" opacity="0.06"/>
 </svg>
 
-<div style="position:absolute;top:20px;left:40px;z-index:20;display:flex;align-items:center;gap:10px"><div style="width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px;color:rgba(255,255,255,0.6)">L</div><div style="font-size:10px;color:rgba(255,255,255,0.4);letter-spacing:2px;text-transform:uppercase;font-weight:600">Practice Logo</div></div>
-<div class="photo"><div class="pl"><svg width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="0.7"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg><span>Insert Photo</span></div>
-<div class="photo-dir"><strong>📷</strong> Front desk team warmly greeting a family</div></div>
-<div class="banner"><div class="hl"><span class="accent">Don't Wait</span><br>Until Summer</div><div class="offer"><div class="ic">🏷️</div><div class="lb">Client<br>Offer</div></div></div>
+<div class="photo">
+  <div class="pl">
+    <svg width="90" height="90" viewBox="0 0 24 24" fill="none" stroke="#777" stroke-width="0.6"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+    <span>Insert Photo</span>
+  </div>
+  <div class="photo-grad"></div>
+  <div class="photo-dir"><strong>📷</strong> Front desk team warmly greeting a family at check-in</div>
+</div>
+
+<div class="logo"><div class="logo-box">L</div><div class="logo-lbl">Practice Logo</div></div>
+
+<div class="banner">
+  <div class="hl"><span class="accent">Don't Wait</span><br>Until Summer</div>
+  <div class="offer"><div class="ic">🏷️</div><div class="lb">Client<br>Offer</div></div>
+</div>
 
 <div class="content">
-<div class="sub">Schedule now and beat the summer rush!</div>
-<div class="grid">
-<div class="gi"><div class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="#c8960a" stroke-width="2.5" stroke-linecap="round"><path d="M9 12l2 2 4-4"/></svg></div><div><div class="gt">Free Consultation</div><div class="gs">No cost first visit</div></div></div>
-<div class="gi"><div class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="#c8960a" stroke-width="2.5" stroke-linecap="round"><path d="M9 12l2 2 4-4"/></svg></div><div><div class="gt">Flexible Payments</div><div class="gs">Monthly plans available</div></div></div>
-<div class="gi"><div class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="#c8960a" stroke-width="2.5" stroke-linecap="round"><path d="M9 12l2 2 4-4"/></svg></div><div><div class="gt">Clear Pricing</div><div class="gs">No surprises</div></div></div>
-<div class="gi"><div class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="#c8960a" stroke-width="2.5" stroke-linecap="round"><path d="M9 12l2 2 4-4"/></svg></div><div><div class="gt">Easy Scheduling</div><div class="gs">Book in minutes</div></div></div>
-</div></div>
-<div class="cta"><div class="cta-btn">Start Today →</div><div class="cta-r"><div class="cta-ph-l">Call or Text</div><div class="cta-ph">(000) 000-0000</div></div></div>
+  <div class="sub">Schedule now and beat the summer rush!</div>
+  <div class="grid">
+    <div class="gi"><div class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="#c8960a" stroke-width="2.5" stroke-linecap="round"><path d="M9 12l2 2 4-4"/></svg></div><div><div class="gt">Free Consultation</div><div class="gs">No cost first visit</div></div></div>
+    <div class="gi"><div class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="#c8960a" stroke-width="2.5" stroke-linecap="round"><path d="M9 12l2 2 4-4"/></svg></div><div><div class="gt">Flexible Payments</div><div class="gs">Monthly plans available</div></div></div>
+    <div class="gi"><div class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="#c8960a" stroke-width="2.5" stroke-linecap="round"><path d="M9 12l2 2 4-4"/></svg></div><div><div class="gt">Clear Pricing</div><div class="gs">No surprises</div></div></div>
+    <div class="gi"><div class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="#c8960a" stroke-width="2.5" stroke-linecap="round"><path d="M9 12l2 2 4-4"/></svg></div><div><div class="gt">Easy Scheduling</div><div class="gs">Book in minutes</div></div></div>
+  </div>
+</div>
+
+<div class="cta">
+  <div class="cta-btn">Start Today →</div>
+  <div class="cta-r"><div class="cta-ph-l">Call or Text</div><div class="cta-ph">(000) 000-0000</div></div>
+</div>
 
 </div></body></html>

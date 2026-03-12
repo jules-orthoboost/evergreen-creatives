@@ -1,64 +1,51 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=1080">
-<title>Dr. M. Rogers · Option 1</title><link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<title>Dr. M. Rogers · Opt 1</title><link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}body{width:1080px;height:1440px;overflow:hidden}
-.ad{width:1080px;height:1440px;position:relative;overflow:hidden;background:#f0ece8;font-family:'Plus Jakarta Sans',sans-serif}
-.curve{position:absolute;top:-250px;left:-250px;width:750px;height:750px;border-radius:50%;background:#e6e0d8;z-index:1}
-.circles{position:absolute;top:80px;left:50px;z-index:10;display:flex;flex-direction:column;gap:20px}
-.circ{width:300px;height:300px;border-radius:50%;background:#ccc;border:5px solid white;box-shadow:0 6px 24px rgba(0,0,0,0.1);overflow:hidden;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:6px}.circ svg{opacity:0.1}.circ span{font-size:8px;color:rgba(0,0,0,0.1);letter-spacing:2px;text-transform:uppercase;font-weight:700}
-.right{position:absolute;top:80px;left:420px;right:44px;z-index:10}
-.camp{font-size:10px;font-weight:700;color:#b09878;letter-spacing:2px;text-transform:uppercase;margin-bottom:16px}
-.hl{font-weight:800;font-size:50px;color:#2a2218;line-height:1.08;letter-spacing:-1.5px;margin-bottom:14px}.hl .accent{font-family:'Playfair Display',serif;font-style:italic;color:#c07830}
-.sub{font-family:'DM Sans',sans-serif;font-size:19px;color:#7a6a5a;line-height:1.6;margin-bottom:28px}
-.offer-box{border:2px dashed #c0b0a0;border-radius:50px;padding:14px 28px;display:inline-flex;align-items:center;gap:10px;margin-bottom:20px}.offer-box .ic{font-size:18px}.offer-box .lb{font-weight:700;font-size:12px;color:#8a7a6a;letter-spacing:1px;text-transform:uppercase}
-.proof{display:flex;align-items:center;gap:10px}.proof svg{width:18px;height:18px}.proof-txt{font-family:'DM Sans',sans-serif;font-size:14px;color:#a09080}.proof-txt strong{color:#6a5a4a;font-weight:700}
-.photo-dir{position:absolute;top:720px;left:50px;right:44px;z-index:10;background:rgba(42,34,24,0.06);border-radius:10px;padding:12px 16px;font-family:'DM Sans',sans-serif;font-size:11px;color:#a09080;line-height:1.5}.photo-dir strong{color:#6a5a4a}
-.bens{position:absolute;top:800px;left:0;right:0;padding:0 44px;z-index:10;display:flex;gap:14px}
-.bn{flex:1;text-align:center;padding:24px 12px;background:white;border-radius:16px;box-shadow:0 2px 12px rgba(0,0,0,0.04)}
-.bn-ic{width:42px;height:42px;margin:0 auto 10px;border-radius:50%;background:rgba(192,120,48,0.08);display:flex;align-items:center;justify-content:center}.bn-ic svg{width:20px;height:20px}
-.bn-t{font-weight:700;font-size:13px;color:#4a3a2a;line-height:1.3}.bn-s{font-family:'DM Sans',sans-serif;font-size:10px;color:#b0a090;margin-top:4px}
-.cta{position:absolute;bottom:0;left:0;right:0;padding:0 44px;height:130px;background:#2a2218;display:flex;align-items:center;justify-content:space-between;z-index:10}
-.cta-btn{background:white;color:#2a2218;font-weight:800;font-size:18px;padding:22px 48px;border-radius:50px;text-transform:uppercase;letter-spacing:0.5px;border:none}
-.cta-r{text-align:right}.cta-ph-l{font-size:9px;color:rgba(255,255,255,0.5);letter-spacing:2px;text-transform:uppercase;font-weight:600;margin-bottom:2px}.cta-ph{font-weight:800;font-size:24px;color:white}
-/* DECO */
-.deco-dots{position:absolute;bottom:130px;right:50px;display:grid;grid-template-columns:repeat(4,8px);gap:6px;z-index:1}.deco-dots span{width:8px;height:8px;border-radius:50%;background:rgba(192,120,48,0.1)}
-.deco-ring{position:absolute;bottom:300px;right:-40px;width:200px;height:200px;border-radius:50%;border:2px solid rgba(192,120,48,0.06);z-index:1}
+.ad{width:1080px;height:1440px;position:relative;overflow:hidden;font-family:'Plus Jakarta Sans',sans-serif;background:#f0ece8}
+.curve{position:absolute;top:-200px;left:-200px;width:700px;height:700px;border-radius:50%;background:#e4ded6}
+.circles{position:absolute;top:80px;left:48px;z-index:10;display:flex;flex-direction:column;gap:24px}
+.circ{width:300px;height:300px;border-radius:50%;background:#c8c0b8;border:6px solid white;box-shadow:0 8px 30px rgba(0,0,0,0.1);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px}.circ svg{opacity:0.12}.circ span{font-size:10px;color:rgba(0,0,0,0.1);letter-spacing:3px;text-transform:uppercase;font-weight:700}
+.right{position:absolute;top:80px;left:420px;right:48px;z-index:10}
+.camp{font-size:11px;font-weight:700;color:#b09878;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:18px}
+.hl{font-weight:800;font-size:52px;color:#2a2218;line-height:1.05;letter-spacing:-1.5px;margin-bottom:16px}.hl .a{font-family:'Playfair Display',serif;font-style:italic;color:#c07830}
+.sub{font-family:'DM Sans',sans-serif;font-size:22px;color:#7a6a5a;line-height:1.55;margin-bottom:28px}
+.offer{display:inline-flex;align-items:center;gap:12px;border:3px dashed #c0b0a0;border-radius:50px;padding:16px 32px;margin-bottom:24px}.offer .ic{font-size:22px}.offer .lb{font-weight:700;font-size:14px;color:#8a7a6a;letter-spacing:1px;text-transform:uppercase}
+.proof{display:flex;align-items:center;gap:10px}.proof svg{width:20px;height:20px}.proof-t{font-family:'DM Sans',sans-serif;font-size:15px;color:#a09080}.proof-t strong{color:#5a4a3a}
+.pic-dir{position:absolute;top:710px;left:48px;right:48px;z-index:10;background:rgba(42,34,24,0.06);border-radius:12px;padding:14px 20px;font-family:'DM Sans',sans-serif;font-size:12px;color:#a09080}.pic-dir strong{color:#5a4a3a}
+.bens{position:absolute;top:790px;left:0;right:0;height:200px;display:flex;align-items:center;padding:0 48px;background:white;border-top:1px solid rgba(0,0,0,0.05);border-bottom:1px solid rgba(0,0,0,0.05)}
+.bn{flex:1;text-align:center;padding:0 14px}
+.bn-ic{width:48px;height:48px;margin:0 auto 10px;border-radius:50%;background:rgba(192,120,48,0.08);display:flex;align-items:center;justify-content:center}.bn-ic svg{width:22px;height:22px}
+.bn-t{font-weight:800;font-size:15px;color:#3a2a1a;margin-bottom:3px}.bn-s{font-family:'DM Sans',sans-serif;font-size:12px;color:#b0a090}
+.cta{position:absolute;bottom:0;left:0;right:0;height:150px;background:#2a2218;display:flex;align-items:center;justify-content:space-between;padding:0 56px}
+.cta-btn{background:white;color:#2a2218;font-weight:800;font-size:20px;padding:22px 48px;border-radius:60px;text-transform:uppercase;letter-spacing:0.5px;border:none}
+.cta-r{text-align:right}.cta-ph-l{font-size:11px;color:rgba(255,255,255,0.4);letter-spacing:2px;text-transform:uppercase;font-weight:600;margin-bottom:4px}.cta-ph{font-weight:800;font-size:28px;color:white}
 </style></head><body><div class="ad">
-
 <svg style="position:absolute;top:0;left:0;width:1080px;height:1440px;z-index:0;pointer-events:none" viewBox="0 0 1080 1440">
-  <defs><radialGradient id="rg1" cx="0.2" cy="0.3" r="0.5"><stop offset="0%" stop-color="#c07830" stop-opacity="0.06"/><stop offset="100%" stop-color="transparent"/></radialGradient></defs>
-  <rect x="0" y="0" width="1080" height="1440" fill="url(#rg1)"/>
-  <circle cx="950" cy="200" r="120" fill="none" stroke="#c07830" stroke-width="2" opacity="0.1"/>
-  <circle cx="950" cy="200" r="80" fill="none" stroke="#c07830" stroke-width="1.5" opacity="0.07"/>
-  <circle cx="950" cy="200" r="40" fill="none" stroke="#c07830" stroke-width="1" opacity="0.05"/>
-  <circle cx="980" cy="900" r="5" fill="#c07830" opacity="0.2"/><circle cx="998" cy="900" r="5" fill="#c07830" opacity="0.15"/><circle cx="1016" cy="900" r="5" fill="#c07830" opacity="0.1"/><circle cx="1034" cy="900" r="5" fill="#c07830" opacity="0.07"/>
-  <circle cx="980" cy="918" r="5" fill="#c07830" opacity="0.15"/><circle cx="998" cy="918" r="5" fill="#c07830" opacity="0.1"/><circle cx="1016" cy="918" r="5" fill="#c07830" opacity="0.07"/><circle cx="1034" cy="918" r="5" fill="#c07830" opacity="0.05"/>
-  <circle cx="980" cy="936" r="5" fill="#c07830" opacity="0.1"/><circle cx="998" cy="936" r="5" fill="#c07830" opacity="0.07"/><circle cx="1016" cy="936" r="5" fill="#c07830" opacity="0.05"/>
-  <path d="M380 1440 Q540 1350 1080 1400" stroke="#c07830" stroke-width="1.5" fill="none" opacity="0.06"/>
-  <path d="M380 1440 Q560 1370 1080 1430" stroke="#c07830" stroke-width="1" fill="none" opacity="0.04"/>
+<circle cx="980" cy="220" r="120" fill="none" stroke="#c07830" stroke-width="2.5" opacity="0.1"/>
+<circle cx="980" cy="220" r="80" fill="none" stroke="#c07830" stroke-width="2" opacity="0.06"/>
+<circle cx="1000" cy="950" r="6" fill="#c07830" opacity="0.2"/><circle cx="1018" cy="950" r="6" fill="#c07830" opacity="0.14"/><circle cx="1036" cy="950" r="6" fill="#c07830" opacity="0.1"/>
+<circle cx="1000" cy="968" r="6" fill="#c07830" opacity="0.14"/><circle cx="1018" cy="968" r="6" fill="#c07830" opacity="0.1"/>
+<path d="M400 1440 Q600 1380 1080 1420" stroke="#c07830" stroke-width="1.5" fill="none" opacity="0.06"/>
 </svg>
-
 <div class="curve"></div>
-<div class="deco-dots"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
-
 <div class="circles">
-<div class="circ"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="0.8"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg><span>Photo 1</span></div>
-<div class="circ"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="0.8"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg><span>Photo 2</span></div>
+<div class="circ"><svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="0.7"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg><span>Photo 1</span></div>
+<div class="circ"><svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="#999" stroke-width="0.7"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg><span>Photo 2</span></div>
 </div>
 <div class="right">
 <div class="camp">End of School · Family-Focused</div>
-<div class="hl"><span class="accent">Celebrate</span> the End of School With a New Smile</div>
+<div class="hl"><span class="a">Celebrate</span> the End of School With a New Smile</div>
 <div class="sub">School's almost out. It's the perfect time to give them the smile they deserve.</div>
-<div class="offer-box"><div class="ic">🏷️</div><div class="lb">Client-Specific Offer</div></div><br>
-<div class="proof"><svg viewBox="0 0 24 24" fill="#c0a070"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="#c0a070"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="#c0a070"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="#c0a070"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="#c0a070"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg><div class="proof-txt"><strong>5-star</strong> · Trusted by local families</div></div>
+<div class="offer"><div class="ic">🏷️</div><div class="lb">Client-Specific Offer</div></div><br>
+<div class="proof"><svg viewBox="0 0 24 24" fill="#c0a070"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="#c0a070"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="#c0a070"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="#c0a070"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="#c0a070"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg><div class="proof-t"><strong>5-star</strong> · Trusted by families</div></div>
 </div>
-<div class="photo-dir"><strong>📷 Photos:</strong> Doctor kneeling at eye level with smiling child · Family laughing in welcoming office</div>
+<div class="pic-dir"><strong>📷 Photos:</strong> Doctor at eye level with smiling child · Family laughing in welcoming office</div>
 <div class="bens">
-<div class="bn"><div class="bn-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#c07830" stroke-width="2" stroke-linecap="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 000-7.78z"/></svg></div><div class="bn-t">Comfort-First Care</div><div class="bn-s">Gentle on kids</div></div>
-<div class="bn"><div class="bn-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#c07830" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 4-4"/></svg></div><div class="bn-t">Free Consultation</div><div class="bn-s">No-pressure visit</div></div>
-<div class="bn"><div class="bn-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#c07830" stroke-width="2" stroke-linecap="round"><path d="M12 2L4 7v5c0 5.5 3.4 10.7 8 12 4.6-1.3 8-6.5 8-12V7l-8-5z"/></svg></div><div class="bn-t">Trusted Team</div><div class="bn-s">Long-term provider</div></div>
-<div class="bn"><div class="bn-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#c07830" stroke-width="2" stroke-linecap="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div><div class="bn-t">All Ages</div><div class="bn-s">Kids, teens, adults</div></div>
+<div class="bn"><div class="bn-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#c07830" stroke-width="2.5" stroke-linecap="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 000-7.78z"/></svg></div><div class="bn-t">Comfort-First</div><div class="bn-s">Gentle on kids</div></div>
+<div class="bn"><div class="bn-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#c07830" stroke-width="2.5" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 4-4"/></svg></div><div class="bn-t">Free Consult</div><div class="bn-s">No-pressure visit</div></div>
+<div class="bn"><div class="bn-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#c07830" stroke-width="2.5" stroke-linecap="round"><path d="M12 2L4 7v5c0 5.5 3.4 10.7 8 12 4.6-1.3 8-6.5 8-12V7l-8-5z"/></svg></div><div class="bn-t">Trusted Team</div><div class="bn-s">Long-term provider</div></div>
+<div class="bn"><div class="bn-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#c07830" stroke-width="2.5" stroke-linecap="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div><div class="bn-t">All Ages</div><div class="bn-s">Kids, teens, adults</div></div>
 </div>
 <div class="cta"><div class="cta-btn">Schedule a Family Visit →</div><div class="cta-r"><div class="cta-ph-l">Call or Text</div><div class="cta-ph">(000) 000-0000</div></div></div>
-
 </div></body></html>

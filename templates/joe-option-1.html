@@ -1,80 +1,53 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=1080">
-<title>Dr. A. Joe · Option 1</title>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<title>Dr. A. Joe · Opt 1</title><link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}body{width:1080px;height:1440px;overflow:hidden}
-.ad{width:1080px;height:1440px;position:relative;overflow:hidden;background:#fafafa;font-family:'Plus Jakarta Sans',sans-serif}
-.top{position:absolute;top:0;left:0;right:0;height:72px;background:#1a1a1a;display:flex;align-items:center;justify-content:space-between;padding:0 40px;z-index:20}
-.top .logo-slot{display:flex;align-items:center;gap:10px}
-.top .logo-box{width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px;color:rgba(255,255,255,0.6)}
-.top .logo-lbl{font-size:10px;color:rgba(255,255,255,0.4);letter-spacing:2px;text-transform:uppercase;font-weight:600}
-.top .camp{font-size:9px;color:rgba(255,255,255,0.35);letter-spacing:1.5px;text-transform:uppercase;font-weight:700}
-.split{position:absolute;top:72px;left:0;right:0;height:820px;display:flex}
-.offer-side{width:520px;background:#f2f2f2;padding:50px 48px;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden}
-.photo-side{flex:1;background:linear-gradient(150deg,#d8d8d8,#bbb);position:relative;overflow:hidden}
-.photo-side .pl{width:100%;height:100%;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:10px}
-.photo-side .pl svg{opacity:0.1}.photo-side .pl span{font-size:9px;color:rgba(0,0,0,0.1);letter-spacing:3px;text-transform:uppercase;font-weight:700}
-.photo-dir{position:absolute;bottom:14px;left:14px;right:14px;background:rgba(0,0,0,0.5);backdrop-filter:blur(6px);border-radius:8px;padding:10px 14px;font-family:'DM Sans',sans-serif;font-size:10px;color:rgba(255,255,255,0.6);line-height:1.5}.photo-dir strong{color:rgba(255,255,255,0.85)}
-.offer-tag{font-size:10px;font-weight:700;color:#999;letter-spacing:2px;text-transform:uppercase;margin-bottom:24px}
-.offer-badge{width:220px;height:220px;border-radius:50%;border:3px dashed #bbb;display:flex;align-items:center;justify-content:center;flex-direction:column;margin-bottom:32px;position:relative;z-index:2}
-.offer-badge .ic{font-size:28px;margin-bottom:4px}.offer-badge .lb{font-weight:800;font-size:15px;color:#666;letter-spacing:1px;text-transform:uppercase;text-align:center;line-height:1.3}
-.headline{font-weight:800;font-size:52px;color:#1a1a1a;line-height:1.08;letter-spacing:-1.5px;margin-bottom:14px;position:relative;z-index:2}
-.headline .accent{font-family:'Playfair Display',serif;font-style:italic;color:#c8960a}
-.sub{font-family:'DM Sans',sans-serif;font-weight:400;font-size:19px;color:#666;line-height:1.6;position:relative;z-index:2}
-.checks{position:absolute;top:820px;left:0;right:0;padding:28px 44px;display:flex;gap:0;border-top:1px solid #e8e8e8;background:white}
-.chk{flex:1;display:flex;align-items:flex-start;gap:12px;padding:0 20px}.chk+.chk{border-left:1px solid #eee}.chk:first-child{padding-left:0}
-.chk-ic{width:32px;height:32px;flex-shrink:0;border-radius:50%;background:#fdf3d7;display:flex;align-items:center;justify-content:center;margin-top:2px}
-.chk-ic svg{width:16px;height:16px}
-.chk-t{font-weight:700;font-size:14px;color:#333;line-height:1.3;margin-bottom:2px}.chk-s{font-family:'DM Sans',sans-serif;font-size:11px;color:#aaa;line-height:1.4}
-.cta{position:absolute;bottom:0;left:0;right:0;padding:0 48px;height:130px;display:flex;align-items:center;justify-content:space-between;background:#1a1a1a}
-.cta-btn{background:white;color:#1a1a1a;font-weight:800;font-size:18px;padding:22px 52px;border-radius:50px;text-transform:uppercase;letter-spacing:0.5px;border:none}
-.cta-r{text-align:right}.cta-ph-l{font-size:9px;color:rgba(255,255,255,0.5);letter-spacing:2px;text-transform:uppercase;font-weight:600;margin-bottom:2px}.cta-ph{font-weight:800;font-size:26px;color:white}
-/* DECORATIVE */
-.deco-orb{position:absolute;width:350px;height:350px;border-radius:50%;background:radial-gradient(circle,rgba(200,150,10,0.08),transparent 70%);top:-80px;right:-100px;z-index:1}
-.deco-lines{position:absolute;bottom:0;left:0;width:100%;height:300px;background:repeating-linear-gradient(135deg,transparent,transparent 18px,rgba(0,0,0,0.015) 18px,rgba(0,0,0,0.015) 19px);z-index:0}
-.deco-dots{position:absolute;top:60px;right:40px;display:grid;grid-template-columns:repeat(3,8px);gap:6px;z-index:1}.deco-dots span{width:8px;height:8px;border-radius:50%;background:rgba(200,150,10,0.12)}
+.ad{width:1080px;height:1440px;position:relative;overflow:hidden;font-family:'Plus Jakarta Sans',sans-serif;background:#f2f2f2}
+.split{position:absolute;top:0;left:0;right:0;bottom:310px;display:flex}
+.offer{width:540px;padding:60px 56px;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden;background:#f2f2f2}
+.pic{flex:1;background:linear-gradient(150deg,#d2d2d2,#aaa);position:relative;overflow:hidden}
+.pic .pl{width:100%;height:100%;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:14px}
+.pic .pl svg{opacity:0.12}.pic .pl span{font-size:12px;color:rgba(0,0,0,0.1);letter-spacing:4px;text-transform:uppercase;font-weight:700}
+.pic-dir{position:absolute;bottom:16px;left:16px;right:16px;background:rgba(0,0,0,0.55);backdrop-filter:blur(8px);border-radius:10px;padding:12px 16px;font-family:'DM Sans',sans-serif;font-size:11px;color:rgba(255,255,255,0.65);line-height:1.5}.pic-dir strong{color:rgba(255,255,255,0.9)}
+.logo{position:absolute;top:24px;left:56px;z-index:20;display:flex;align-items:center;gap:12px}
+.logo-box{width:44px;height:44px;border-radius:10px;background:rgba(0,0,0,0.06);border:1px solid rgba(0,0,0,0.08);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:16px;color:rgba(0,0,0,0.25)}
+.logo-lbl{font-size:11px;color:rgba(0,0,0,0.25);letter-spacing:2.5px;text-transform:uppercase;font-weight:600}
+.tag{font-size:11px;font-weight:700;color:#999;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:20px}
+.badge{width:200px;height:200px;border-radius:50%;border:3px dashed #bbb;display:flex;align-items:center;justify-content:center;flex-direction:column;margin-bottom:28px;position:relative;z-index:2}
+.badge .ic{font-size:32px;margin-bottom:4px}.badge .lb{font-weight:800;font-size:14px;color:#777;letter-spacing:1.5px;text-transform:uppercase;text-align:center;line-height:1.3}
+.hl{font-weight:800;font-size:60px;color:#111;line-height:1.02;letter-spacing:-2px;margin-bottom:16px;position:relative;z-index:2}.hl .a{font-family:'Playfair Display',serif;font-style:italic;color:#c8960a}
+.sub{font-family:'DM Sans',sans-serif;font-size:24px;color:#666;line-height:1.5;position:relative;z-index:2}
+.checks{position:absolute;bottom:150px;left:0;right:0;height:160px;display:flex;align-items:center;background:white;border-top:1px solid #e8e8e8;border-bottom:1px solid #e8e8e8;padding:0 48px}
+.chk{flex:1;display:flex;align-items:center;gap:14px;padding:0 20px}.chk+.chk{border-left:1px solid #eee}.chk:first-child{padding-left:0}
+.chk-ic{width:44px;height:44px;flex-shrink:0;border-radius:50%;background:#fdf3d7;display:flex;align-items:center;justify-content:center}.chk-ic svg{width:22px;height:22px}
+.chk-t{font-weight:800;font-size:16px;color:#222;margin-bottom:3px}.chk-s{font-family:'DM Sans',sans-serif;font-size:13px;color:#aaa}
+.cta{position:absolute;bottom:0;left:0;right:0;height:150px;background:#1a1a1a;display:flex;align-items:center;justify-content:space-between;padding:0 56px}
+.cta-btn{background:white;color:#1a1a1a;font-weight:800;font-size:20px;padding:22px 52px;border-radius:60px;text-transform:uppercase;letter-spacing:0.5px;border:none}
+.cta-r{text-align:right}.cta-ph-l{font-size:11px;color:rgba(255,255,255,0.4);letter-spacing:2px;text-transform:uppercase;font-weight:600;margin-bottom:4px}.cta-ph{font-weight:800;font-size:30px;color:white}
 </style></head><body><div class="ad">
-
-<!-- DECORATIVE ELEMENTS: Budget/Accessible style - bold geometric, yellow accents -->
-<svg style="position:absolute;top:72px;left:0;width:520px;height:820px;z-index:1;pointer-events:none" viewBox="0 0 520 820">
-  <defs>
-    <linearGradient id="jg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#c8960a" stop-opacity="0.08"/><stop offset="100%" stop-color="#c8960a" stop-opacity="0"/></linearGradient>
-  </defs>
-  <circle cx="480" cy="80" r="180" fill="url(#jg1)"/>
-  <circle cx="60" cy="700" r="120" fill="url(#jg1)"/>
-  <line x1="40" y1="0" x2="40" y2="120" stroke="#c8960a" stroke-width="2" opacity="0.15"/>
-  <line x1="480" y1="300" x2="520" y2="300" stroke="#c8960a" stroke-width="3" opacity="0.12"/>
-  <line x1="480" y1="320" x2="510" y2="320" stroke="#c8960a" stroke-width="2" opacity="0.08"/>
-  <rect x="420" y="680" width="80" height="80" rx="12" fill="none" stroke="#c8960a" stroke-width="1.5" opacity="0.1"/>
-  <circle cx="100" cy="160" r="4" fill="#c8960a" opacity="0.2"/><circle cx="116" cy="160" r="4" fill="#c8960a" opacity="0.15"/><circle cx="132" cy="160" r="4" fill="#c8960a" opacity="0.1"/>
-  <circle cx="100" cy="176" r="4" fill="#c8960a" opacity="0.15"/><circle cx="116" cy="176" r="4" fill="#c8960a" opacity="0.1"/><circle cx="132" cy="176" r="4" fill="#c8960a" opacity="0.07"/>
-  <path d="M0 600 Q260 550 520 620" stroke="#c8960a" stroke-width="1" fill="none" opacity="0.06"/>
+<svg style="position:absolute;top:0;left:0;width:540px;height:1130px;z-index:1;pointer-events:none" viewBox="0 0 540 1130">
+<circle cx="500" cy="100" r="200" fill="none" stroke="#c8960a" stroke-width="1.5" opacity="0.08"/>
+<circle cx="60" cy="900" r="140" fill="none" stroke="#c8960a" stroke-width="1" opacity="0.05"/>
+<line x1="50" y1="80" x2="50" y2="200" stroke="#c8960a" stroke-width="2" opacity="0.12"/>
+<circle cx="480" cy="800" r="6" fill="#c8960a" opacity="0.2"/><circle cx="498" cy="800" r="6" fill="#c8960a" opacity="0.14"/><circle cx="480" cy="818" r="6" fill="#c8960a" opacity="0.14"/>
+<rect x="400" y="680" width="100" height="100" rx="14" fill="none" stroke="#c8960a" stroke-width="1.5" opacity="0.07"/>
 </svg>
-<svg style="position:absolute;top:72px;right:0;width:560px;height:820px;z-index:1;pointer-events:none" viewBox="0 0 560 820">
-  <circle cx="280" cy="410" r="300" fill="none" stroke="#000" stroke-width="1" opacity="0.03"/>
-  <circle cx="280" cy="410" r="240" fill="none" stroke="#000" stroke-width="0.5" opacity="0.03"/>
-  <rect x="40" y="40" width="480" height="740" rx="0" fill="none" stroke="#000" stroke-width="0.5" opacity="0.04"/>
-</svg>
-
-<div class="top"><div class="logo-slot"><div class="logo-box">L</div><div class="logo-lbl">Practice Logo</div></div><div class="camp">End of School · Dr. A. Joe</div></div>
 <div class="split">
-<div class="offer-side">
-
-
-<div class="offer-tag">Budget-Friendly Everyday Ortho</div>
-<div class="offer-badge"><div class="ic">🏷️</div><div class="lb">Client<br>Offer<br>Here</div></div>
-<div class="headline"><span class="accent">Before School</span><br>Ends = Best<br>Time to Start</div>
+<div class="offer">
+<div class="tag">Budget-Friendly Everyday Ortho</div>
+<div class="badge"><div class="ic">🏷️</div><div class="lb">Client<br>Offer<br>Here</div></div>
+<div class="hl"><span class="a">Before School</span><br>Ends = Best<br>Time to Start</div>
 <div class="sub">Payment plans built for real families. Get ahead of the rush.</div>
 </div>
-<div class="photo-side"><div class="pl"><svg width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="0.7"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg><span>Insert Photo</span></div>
-<div class="photo-dir"><strong>📷</strong> Parent + child in bright office, reviewing a plan on tablet</div></div>
+<div class="pic"><div class="pl"><svg width="90" height="90" viewBox="0 0 24 24" fill="none" stroke="#777" stroke-width="0.6"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg><span>Insert Photo</span></div>
+<div class="pic-dir"><strong>📷</strong> Parent + child in bright office, reviewing a plan on tablet</div></div>
 </div>
+<div class="logo"><div class="logo-box">L</div><div class="logo-lbl">Practice Logo</div></div>
 <div class="checks">
-<div class="chk"><div class="chk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#c8960a" stroke-width="2.5" stroke-linecap="round"><path d="M9 12l2 2 4-4"/></svg></div><div><div class="chk-t">Free Consultation</div><div class="chk-s">No cost, no pressure</div></div></div>
-<div class="chk"><div class="chk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#c8960a" stroke-width="2.5" stroke-linecap="round"><path d="M9 12l2 2 4-4"/></svg></div><div><div class="chk-t">Flexible Payments</div><div class="chk-s">Monthly plans that fit</div></div></div>
+<div class="chk"><div class="chk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#c8960a" stroke-width="2.5" stroke-linecap="round"><path d="M9 12l2 2 4-4"/></svg></div><div><div class="chk-t">Free Consult</div><div class="chk-s">No cost, no pressure</div></div></div>
+<div class="chk"><div class="chk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#c8960a" stroke-width="2.5" stroke-linecap="round"><path d="M9 12l2 2 4-4"/></svg></div><div><div class="chk-t">Flex Payments</div><div class="chk-s">Monthly plans that fit</div></div></div>
 <div class="chk"><div class="chk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#c8960a" stroke-width="2.5" stroke-linecap="round"><path d="M9 12l2 2 4-4"/></svg></div><div><div class="chk-t">Clear Pricing</div><div class="chk-s">No hidden costs</div></div></div>
-<div class="chk"><div class="chk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#c8960a" stroke-width="2.5" stroke-linecap="round"><path d="M9 12l2 2 4-4"/></svg></div><div><div class="chk-t">Easy Scheduling</div><div class="chk-s">Book in minutes</div></div></div>
+<div class="chk"><div class="chk-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#c8960a" stroke-width="2.5" stroke-linecap="round"><path d="M9 12l2 2 4-4"/></svg></div><div><div class="chk-t">Easy Booking</div><div class="chk-s">Book in minutes</div></div></div>
 </div>
 <div class="cta"><div class="cta-btn">Book Your Free Consultation →</div><div class="cta-r"><div class="cta-ph-l">Call or Text</div><div class="cta-ph">(000) 000-0000</div></div></div>
-
 </div></body></html>

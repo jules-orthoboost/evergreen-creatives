@@ -1,56 +1,42 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=1080">
-<title>Dr. C. Yang · Option 1</title><link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<title>Dr. C. Yang · Opt 1</title><link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}body{width:1080px;height:1440px;overflow:hidden}
-.ad{width:1080px;height:1440px;position:relative;overflow:hidden;background:#f5f5f5;font-family:'Plus Jakarta Sans',sans-serif}
-.top-bar{position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(90deg,#6a7a8a,#8a9aaa,#6a7a8a)}
-.split{position:absolute;top:5px;left:0;right:0;height:840px;display:flex}
-.portrait{width:450px;background:linear-gradient(160deg,#ccc,#aaa);position:relative;overflow:hidden}.portrait .pl{width:100%;height:100%;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:10px}.portrait .pl svg{opacity:0.08}.portrait .pl span{font-size:9px;color:rgba(0,0,0,0.08);letter-spacing:3px;text-transform:uppercase;font-weight:700}
-.creds{flex:1;padding:60px 48px;background:white;display:flex;flex-direction:column;justify-content:center}
-.camp{font-size:9px;font-weight:700;color:#8a9aaa;letter-spacing:3px;text-transform:uppercase;margin-bottom:28px}
-.hl{font-weight:800;font-size:46px;color:#1a1a1a;line-height:1.1;letter-spacing:-1px;margin-bottom:16px}.hl .accent{font-family:'Playfair Display',serif;color:#3a6a8a;font-style:italic}
-.rule{width:50px;height:2px;background:linear-gradient(90deg,#3a6a8a,#8ab0cc);margin-bottom:16px}
-.sub{font-family:'DM Sans',sans-serif;font-size:18px;color:#666;line-height:1.65;margin-bottom:28px}
-.cred-list{display:flex;flex-direction:column;gap:12px;margin-bottom:24px}
-.cred{display:flex;align-items:center;gap:12px;padding:14px 18px;background:#f8f9fa;border-left:3px solid #3a6a8a;border-radius:0 8px 8px 0}.cred .t{font-weight:700;font-size:14px;color:#222}
-.offer-area{position:absolute;top:845px;left:0;right:0;padding:20px 48px;border-top:1px solid #eee;border-bottom:1px solid #eee;background:white;display:flex;align-items:center;gap:16px}
-.offer-badge{display:flex;align-items:center;gap:10px;padding:10px 18px;border:2px dashed #bbb;border-radius:10px}.offer-badge .ic{font-size:18px}.offer-badge .lb{font-weight:700;font-size:12px;color:#777;letter-spacing:1px;text-transform:uppercase}
-.bens{position:absolute;top:920px;left:0;right:0;padding:0 44px;display:flex;gap:14px}
-.bn{flex:1;text-align:center;padding:24px 14px;background:white;border:1px solid #eee;border-radius:14px}
-.bn-ic{width:40px;height:40px;margin:0 auto 8px;border-radius:10px;background:rgba(58,106,138,0.06);display:flex;align-items:center;justify-content:center}.bn-ic svg{width:18px;height:18px}
-.bn-t{font-weight:700;font-size:14px;color:#222;line-height:1.3}.bn-s{font-family:'DM Sans',sans-serif;font-size:10px;color:#aaa;margin-top:3px}
-.cta{position:absolute;bottom:0;left:0;right:0;padding:0 48px;height:130px;background:#1a1a1a;display:flex;align-items:center;justify-content:space-between}
-.cta-btn{background:white;color:#1a2a3a;font-weight:800;font-size:16px;padding:20px 44px;border-radius:50px;text-transform:uppercase;letter-spacing:0.5px;border:none}
-.cta-r{text-align:right}.cta-ph-l{font-size:9px;color:rgba(255,255,255,0.5);letter-spacing:2px;text-transform:uppercase;font-weight:600;margin-bottom:2px}.cta-ph{font-weight:800;font-size:24px;color:white}
-.deco-cross{position:absolute;top:60px;right:48px;width:40px;height:40px;z-index:1}.deco-cross::before,.deco-cross::after{content:'';position:absolute;background:rgba(58,106,138,0.08)}.deco-cross::before{width:1px;height:40px;left:20px;top:0}.deco-cross::after{width:40px;height:1px;top:20px;left:0}
+.ad{width:1080px;height:1440px;position:relative;overflow:hidden;font-family:'Plus Jakarta Sans',sans-serif;background:#f5f5f5}
+.bar{position:absolute;top:0;left:0;right:0;height:6px;background:linear-gradient(90deg,#6a7a8a,#8a9aaa,#6a7a8a)}
+.split{position:absolute;top:6px;left:0;right:0;bottom:310px;display:flex}
+.portrait{width:460px;background:linear-gradient(160deg,#c8c8c8,#a0a0a0);position:relative;overflow:hidden}.portrait .pl{width:100%;height:100%;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:14px}.portrait .pl svg{opacity:0.1}.portrait .pl span{font-size:12px;color:rgba(0,0,0,0.1);letter-spacing:4px;text-transform:uppercase;font-weight:700}
+.pic-dir{position:absolute;bottom:16px;left:16px;right:16px;background:rgba(0,0,0,0.55);backdrop-filter:blur(8px);border-radius:10px;padding:12px 16px;font-family:'DM Sans',sans-serif;font-size:11px;color:rgba(255,255,255,0.65);line-height:1.5}.pic-dir strong{color:rgba(255,255,255,0.9)}
+.creds{flex:1;padding:56px 48px;background:white;display:flex;flex-direction:column;justify-content:center}
+.camp{font-size:10px;font-weight:700;color:#8a9aaa;letter-spacing:3px;text-transform:uppercase;margin-bottom:28px}
+.hl{font-weight:800;font-size:48px;color:#111;line-height:1.08;letter-spacing:-1.5px;margin-bottom:16px}.hl .a{font-family:'Playfair Display',serif;color:#3a6a8a;font-style:italic}
+.rule{width:60px;height:3px;background:linear-gradient(90deg,#3a6a8a,#8ab0cc);margin-bottom:16px;border-radius:2px}
+.sub{font-family:'DM Sans',sans-serif;font-size:22px;color:#666;line-height:1.6;margin-bottom:28px}
+.cred-list{display:flex;flex-direction:column;gap:14px}
+.cred{display:flex;align-items:center;gap:14px;padding:16px 20px;background:#f8f9fa;border-left:4px solid #3a6a8a;border-radius:0 10px 10px 0}.cred .t{font-weight:800;font-size:16px;color:#222}
+.offer-area{position:absolute;bottom:310px;left:0;right:0;height:80px;background:#f8f9fa;border-top:1px solid #e8e8e8;border-bottom:1px solid #e8e8e8;display:flex;align-items:center;padding:0 48px;gap:16px}
+.offer-badge{display:flex;align-items:center;gap:12px;padding:12px 22px;border:2px dashed #bbb;border-radius:12px}.offer-badge .ic{font-size:20px}.offer-badge .lb{font-weight:700;font-size:13px;color:#777;letter-spacing:1px;text-transform:uppercase}
+.bens{position:absolute;bottom:150px;left:0;right:0;height:160px;display:flex;align-items:center;padding:0 48px;background:white}
+.bn{flex:1;text-align:center}
+.bn-ic{width:44px;height:44px;margin:0 auto 8px;border-radius:10px;background:rgba(58,106,138,0.06);display:flex;align-items:center;justify-content:center}.bn-ic svg{width:22px;height:22px}
+.bn-t{font-weight:800;font-size:15px;color:#222;margin-bottom:3px}.bn-s{font-family:'DM Sans',sans-serif;font-size:12px;color:#aaa}
+.cta{position:absolute;bottom:0;left:0;right:0;height:150px;background:#1a2a3a;display:flex;align-items:center;justify-content:space-between;padding:0 56px}
+.cta-btn{background:white;color:#1a2a3a;font-weight:800;font-size:18px;padding:22px 48px;border-radius:60px;text-transform:uppercase;letter-spacing:0.5px;border:none}
+.cta-r{text-align:right}.cta-ph-l{font-size:11px;color:rgba(255,255,255,0.4);letter-spacing:2px;text-transform:uppercase;font-weight:600;margin-bottom:4px}.cta-ph{font-weight:800;font-size:28px;color:white}
 </style></head><body><div class="ad">
-
-<svg style="position:absolute;top:5px;left:0;width:1080px;height:1440px;z-index:0;pointer-events:none" viewBox="0 0 1080 1440">
-  <defs><linearGradient id="yg1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#3a6a8a" stop-opacity="0.03"/><stop offset="100%" stop-color="transparent"/></linearGradient></defs>
-  <rect x="450" y="0" width="630" height="840" fill="url(#yg1)"/>
-  <!-- Cross marks - clinical precision feel -->
-  <g opacity="0.12" stroke="#3a6a8a" stroke-width="1.5">
-    <line x1="1000" y1="50" x2="1000" y2="90"/><line x1="980" y1="70" x2="1020" y2="70"/>
-  </g>
-  <g opacity="0.08" stroke="#3a6a8a" stroke-width="1">
-    <line x1="1040" y1="120" x2="1040" y2="148"/><line x1="1026" y1="134" x2="1054" y2="134"/>
-  </g>
-  <!-- Precision grid dots -->
-  <circle cx="500" cy="60" r="3" fill="#3a6a8a" opacity="0.15"/><circle cx="516" cy="60" r="3" fill="#3a6a8a" opacity="0.1"/><circle cx="532" cy="60" r="3" fill="#3a6a8a" opacity="0.07"/>
-  <circle cx="500" cy="76" r="3" fill="#3a6a8a" opacity="0.1"/><circle cx="516" cy="76" r="3" fill="#3a6a8a" opacity="0.07"/>
-  <!-- Accent lines under credentials -->
-  <line x1="480" y1="860" x2="1060" y2="860" stroke="#3a6a8a" stroke-width="1" opacity="0.06"/>
-  <rect x="960" y="900" width="90" height="90" rx="0" fill="none" stroke="#3a6a8a" stroke-width="1" opacity="0.05"/>
+<svg style="position:absolute;top:6px;right:0;width:620px;height:1130px;z-index:0;pointer-events:none" viewBox="0 0 620 1130">
+<g opacity="0.12" stroke="#3a6a8a" stroke-width="2"><line x1="560" y1="40" x2="560" y2="80"/><line x1="540" y1="60" x2="580" y2="60"/></g>
+<g opacity="0.07" stroke="#3a6a8a" stroke-width="1.5"><line x1="590" y1="110" x2="590" y2="140"/><line x1="575" y1="125" x2="605" y2="125"/></g>
+<circle cx="200" cy="50" r="4" fill="#3a6a8a" opacity="0.15"/><circle cx="218" cy="50" r="4" fill="#3a6a8a" opacity="0.1"/><circle cx="200" cy="68" r="4" fill="#3a6a8a" opacity="0.1"/>
 </svg>
-
-<div class="top-bar"></div>
-<div style="position:absolute;top:20px;left:48px;z-index:20;display:flex;align-items:center;gap:10px"><div style="width:40px;height:40px;border-radius:8px;background:rgba(0,0,0,0.04);border:1px solid rgba(0,0,0,0.06);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px;color:rgba(0,0,0,0.2)">L</div><div style="font-size:10px;color:rgba(0,0,0,0.2);letter-spacing:2px;text-transform:uppercase;font-weight:600">Practice Logo</div></div>
+<div class="bar"></div>
+<div style="position:absolute;top:20px;right:48px;z-index:20;display:flex;align-items:center;gap:12px"><div style="width:44px;height:44px;border-radius:10px;background:rgba(0,0,0,0.04);border:1px solid rgba(0,0,0,0.06);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:16px;color:rgba(0,0,0,0.2)">L</div><div style="font-size:11px;color:rgba(0,0,0,0.2);letter-spacing:2.5px;text-transform:uppercase;font-weight:600">Practice Logo</div></div>
 <div class="split">
-<div class="portrait"><div class="pl"><svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="0.7"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg><span>Doctor Portrait</span></div>
-<div style="position:absolute;bottom:14px;left:14px;right:14px;background:rgba(0,0,0,0.5);backdrop-filter:blur(6px);border-radius:8px;padding:8px 12px;font-family:'DM Sans',sans-serif;font-size:10px;color:rgba(255,255,255,0.6);line-height:1.5"><strong style="color:rgba(255,255,255,0.85)">📷</strong> Professional headshot with credentials visible</div></div>
+<div class="portrait"><div class="pl"><svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="0.6"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg><span>Doctor Portrait</span></div>
+<div class="pic-dir"><strong>📷</strong> Professional headshot with credentials visible</div></div>
 <div class="creds">
 <div class="camp">High-Expertise Clinical · End of School</div>
-<div class="hl"><span class="accent">Expert</span> Orthodontic Care. Now Accepting New Patients.</div>
+<div class="hl"><span class="a">Expert</span> Orthodontic Care. Now Accepting New Patients.</div>
 <div class="rule"></div>
 <div class="sub">The right time to get the care you deserve.</div>
 <div class="cred-list">
@@ -60,11 +46,10 @@
 </div></div></div>
 <div class="offer-area"><div class="offer-badge"><div class="ic">🏷️</div><div class="lb">Client-Specific Offer</div></div></div>
 <div class="bens">
-<div class="bn"><div class="bn-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#3a6a8a" stroke-width="2" stroke-linecap="round"><path d="M12 2L4 7v5c0 5.5 3.4 10.7 8 12 4.6-1.3 8-6.5 8-12V7l-8-5z"/></svg></div><div class="bn-t">Board<br>Certified</div><div class="bn-s">Specialist credentials</div></div>
-<div class="bn"><div class="bn-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#3a6a8a" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 4-4"/></svg></div><div class="bn-t">Precision<br>Planning</div><div class="bn-s">Customized approach</div></div>
-<div class="bn"><div class="bn-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#3a6a8a" stroke-width="2" stroke-linecap="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg></div><div class="bn-t">Long-Term<br>Stability</div><div class="bn-s">Results that last</div></div>
-<div class="bn"><div class="bn-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#3a6a8a" stroke-width="2" stroke-linecap="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 000-7.78z"/></svg></div><div class="bn-t">Patient<br>Trust</div><div class="bn-s">Experience matters</div></div>
+<div class="bn"><div class="bn-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#3a6a8a" stroke-width="2.5" stroke-linecap="round"><path d="M12 2L4 7v5c0 5.5 3.4 10.7 8 12 4.6-1.3 8-6.5 8-12V7l-8-5z"/></svg></div><div class="bn-t">Board Certified</div><div class="bn-s">Specialist credentials</div></div>
+<div class="bn"><div class="bn-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#3a6a8a" stroke-width="2.5" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 4-4"/></svg></div><div class="bn-t">Precision</div><div class="bn-s">Customized approach</div></div>
+<div class="bn"><div class="bn-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#3a6a8a" stroke-width="2.5" stroke-linecap="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg></div><div class="bn-t">Long-Term</div><div class="bn-s">Results that last</div></div>
+<div class="bn"><div class="bn-ic"><svg viewBox="0 0 24 24" fill="none" stroke="#3a6a8a" stroke-width="2.5" stroke-linecap="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 000-7.78z"/></svg></div><div class="bn-t">Trust</div><div class="bn-s">Experience matters</div></div>
 </div>
 <div class="cta"><div class="cta-btn">Request Your Expert Consultation →</div><div class="cta-r"><div class="cta-ph-l">Call or Text</div><div class="cta-ph">(000) 000-0000</div></div></div>
-
 </div></body></html>
