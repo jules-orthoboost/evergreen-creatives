@@ -4,343 +4,81 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>OrthoBoost · End of School Campaign Templates</title>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
-  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Plus Jakarta Sans', sans-serif; background: #0a0a0a; color: white; min-height: 100vh; }
 
-  :root {
-    --bg: #0a0a0a;
-    --card-bg: rgba(255,255,255,0.03);
-    --card-border: rgba(255,255,255,0.06);
-    --text: white;
-    --text-dim: rgba(255,255,255,0.5);
-    --text-muted: rgba(255,255,255,0.25);
-    --accent: #7AEFDF;
-    --accent-dim: rgba(122,239,223,0.15);
+  .header { text-align: center; padding: 60px 24px 40px; }
+  .header h1 { font-size: 36px; font-weight: 800; letter-spacing: -1px; margin-bottom: 8px; }
+  .header p { font-size: 14px; color: rgba(255,255,255,0.4); }
+
+  .section { max-width: 1100px; margin: 0 auto; padding: 0 24px 48px; }
+  .section-label { font-size: 13px; font-weight: 800; color: rgba(255,255,255,0.5); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid rgba(255,255,255,0.06); }
+
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+
+  .grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+    border: 1px solid rgba(255,255,255,0.06);
   }
 
-  body {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    min-height: 100vh;
-    overflow-x: hidden;
-  }
+  .footer { text-align: center; padding: 24px; font-size: 11px; color: rgba(255,255,255,0.2); letter-spacing: 1px; }
 
-  /* ═══ BG DECORATION ═══ */
-  .bg-decor { position: fixed; inset: 0; pointer-events: none; z-index: 0; overflow: hidden; }
-  .bg-grid { position: absolute; inset: 0; background: repeating-linear-gradient(0deg, transparent, transparent 79px, rgba(255,255,255,0.012) 79px, rgba(255,255,255,0.012) 80px), repeating-linear-gradient(90deg, transparent, transparent 79px, rgba(255,255,255,0.012) 79px, rgba(255,255,255,0.012) 80px); }
-  .bg-grad { position: absolute; top: 0; left: 0; right: 0; height: 500px; background: linear-gradient(180deg, rgba(22,48,85,0.2), transparent); }
-  .bg-orb-1 { position: absolute; width: 800px; height: 800px; top: -300px; right: -200px; border-radius: 50%; background: radial-gradient(circle, rgba(122,239,223,0.04), transparent 70%); }
-  .bg-orb-2 { position: absolute; width: 600px; height: 600px; bottom: 10%; left: -200px; border-radius: 50%; background: radial-gradient(circle, rgba(41,187,246,0.03), transparent 70%); }
-
-  /* ═══ HEADER ═══ */
-  .header { position: relative; z-index: 10; text-align: center; padding: 80px 24px 60px; }
-  .header-logo { font-size: 14px; font-weight: 800; letter-spacing: 4px; text-transform: uppercase; color: var(--accent); margin-bottom: 20px; }
-  .header h1 { font-size: clamp(32px, 5vw, 48px); font-weight: 800; letter-spacing: -1px; line-height: 1.1; margin-bottom: 16px; }
-  .header p { font-family: 'DM Sans', sans-serif; font-size: 16px; color: var(--text-dim); max-width: 600px; margin: 0 auto 24px; line-height: 1.6; }
-  .header-badge { display: inline-flex; align-items: center; gap: 8px; background: var(--accent-dim); border: 1px solid rgba(122,239,223,0.2); padding: 8px 20px; border-radius: 24px; font-size: 12px; font-weight: 700; color: var(--accent); letter-spacing: 1px; text-transform: uppercase; }
-  .header-badge .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
-
-  /* ═══ PERSONA SECTIONS ═══ */
-  .personas { position: relative; z-index: 10; max-width: 1200px; margin: 0 auto; padding: 0 24px 80px; }
-
-  .persona-group { margin-bottom: 64px; }
-  .persona-label { display: flex; align-items: center; gap: 16px; margin-bottom: 20px; padding-bottom: 16px; border-bottom: 1px solid rgba(255,255,255,0.05); }
-  .persona-icon { width: 44px; height: 44px; border-radius: 12px; background: var(--card-bg); border: 1px solid var(--card-border); display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0; }
-  .persona-name { font-size: 18px; font-weight: 800; letter-spacing: -0.3px; }
-  .persona-desc { font-family: 'DM Sans', sans-serif; font-size: 13px; color: var(--text-muted); margin-top: 2px; }
-
-  .cards-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
-
-  .card {
-    background: var(--card-bg); border: 1px solid var(--card-border);
-    border-radius: 16px; overflow: hidden; cursor: pointer;
-    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
-  }
-  .card:hover { transform: translateY(-4px); border-color: rgba(122,239,223,0.15); box-shadow: 0 12px 48px rgba(0,0,0,0.4); }
-
-  .card-preview { width: 100%; aspect-ratio: 4/5; overflow: hidden; position: relative; }
-  .card-preview img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
-
-  .card-info { padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.04); }
-  .card-title { font-size: 13px; font-weight: 700; }
-  .card-layout { font-size: 10px; font-weight: 600; color: var(--text-muted); letter-spacing: 1px; text-transform: uppercase; margin-top: 2px; }
-  .card-open { font-size: 11px; font-weight: 700; color: var(--accent); letter-spacing: 1px; text-transform: uppercase; background: none; border: 1px solid rgba(122,239,223,0.2); padding: 6px 14px; border-radius: 8px; cursor: pointer; transition: background 0.2s; }
-  .card-open:hover { background: var(--accent-dim); }
-
-  /* ═══ MODAL ═══ */
-  .modal-overlay {
-    position: fixed; inset: 0; z-index: 1000;
-    background: rgba(0,0,0,0.9); backdrop-filter: blur(16px);
-    display: none; align-items: center; justify-content: center;
-    padding: 24px; cursor: pointer;
-  }
-  .modal-overlay.active { display: flex; }
-
-  .modal-content {
-    max-width: 90vw; max-height: 92vh;
-    position: relative; cursor: default;
-    display: flex; flex-direction: column; align-items: center;
-  }
-  .modal-content img {
-    max-width: 100%; max-height: 82vh;
-    border-radius: 12px; box-shadow: 0 24px 80px rgba(0,0,0,0.6);
-    object-fit: contain;
-  }
-
-  .modal-bar {
-    display: flex; align-items: center; justify-content: space-between;
-    width: 100%; max-width: 600px; margin-top: 16px; gap: 16px;
-  }
-  .modal-title { font-size: 15px; font-weight: 700; }
-  .modal-sub { font-family: 'DM Sans', sans-serif; font-size: 12px; color: var(--text-muted); margin-top: 2px; }
-  .modal-nav { display: flex; gap: 8px; }
-  .modal-nav button {
-    width: 40px; height: 40px; border-radius: 10px;
-    background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);
-    color: var(--text-dim); font-size: 20px; cursor: pointer;
-    display: flex; align-items: center; justify-content: center;
-    transition: background 0.2s;
-  }
-  .modal-nav button:hover { background: rgba(255,255,255,0.12); }
-  .modal-close {
-    position: absolute; top: -50px; right: 0;
-    width: 40px; height: 40px; border-radius: 50%;
-    background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.1);
-    color: white; font-size: 20px; cursor: pointer;
-    display: flex; align-items: center; justify-content: center;
-  }
-  .modal-close:hover { background: rgba(255,255,255,0.15); }
-
-  /* ═══ FOOTER ═══ */
-  .page-footer { position: relative; z-index: 10; text-align: center; padding: 20px 24px 40px; border-top: 1px solid rgba(255,255,255,0.04); }
-  .page-footer p { font-size: 11px; color: var(--text-muted); letter-spacing: 1px; }
-
-  @media (max-width: 768px) {
-    .cards-grid { grid-template-columns: 1fr; }
-  }
+  @media (max-width: 700px) { .grid { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
 
-<div class="bg-decor">
-  <div class="bg-grid"></div>
-  <div class="bg-grad"></div>
-  <div class="bg-orb-1"></div>
-  <div class="bg-orb-2"></div>
+<div class="header">
+  <h1>End of School Campaign</h1>
+  <p>10 Templates · 5 Personas · V1 &amp; V2 per Persona</p>
 </div>
 
-<header class="header">
-  <div class="header-logo">OrthoBoost</div>
-  <h1>End of School<br>Campaign Templates</h1>
-  <p>Production-ready ad templates for 5 persona archetypes. Each design is unique to its persona's competitive landscape and strategic brief.</p>
-  <div class="header-badge">
-    <span class="dot"></span>
-    10 Templates · 5 Personas · 4:5 Portrait
-  </div>
-</header>
-
-<main class="personas">
-
-  <!-- DR. A. JOE -->
-  <section class="persona-group">
-    <div class="persona-label">
-      <div class="persona-icon">💰</div>
-      <div>
-        <div class="persona-name">Dr. A. Joe</div>
-        <div class="persona-desc">Budget-Friendly Everyday Ortho</div>
-      </div>
-    </div>
-    <div class="cards-grid">
-      <div class="card" onclick="openModal(0)">
-        <div class="card-preview"><img src="End-of-School_V1_Static_Dr-Joe-Client-Template.png" alt="Dr. Joe V1" loading="lazy"></div>
-        <div class="card-info">
-          <div><div class="card-title">Version 1: Before School Ends</div><div class="card-layout">Split layout · Illustration</div></div>
-          <button class="card-open">View</button>
-        </div>
-      </div>
-      <div class="card" onclick="openModal(1)">
-        <div class="card-preview"><img src="End-of-School_V2_Static_Dr-Joe-Client-Template.png" alt="Dr. Joe V2" loading="lazy"></div>
-        <div class="card-info">
-          <div><div class="card-title">Version 2: Don't Wait Until Summer</div><div class="card-layout">Banner overlay · Grid</div></div>
-          <button class="card-open">View</button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- DR. M. ROGERS -->
-  <section class="persona-group">
-    <div class="persona-label">
-      <div class="persona-icon">👨‍👩‍👧</div>
-      <div>
-        <div class="persona-name">Dr. M. Rogers</div>
-        <div class="persona-desc">Family-Focused Community Ortho</div>
-      </div>
-    </div>
-    <div class="cards-grid">
-      <div class="card" onclick="openModal(2)">
-        <div class="card-preview"><img src="End-of-School_V1_Static_Dr-Rogers-Client-Template.png" alt="Dr. Rogers V1" loading="lazy"></div>
-        <div class="card-info">
-          <div><div class="card-title">Version 1: Celebrate the End of School</div><div class="card-layout">Photo split · Checklist</div></div>
-          <button class="card-open">View</button>
-        </div>
-      </div>
-      <div class="card" onclick="openModal(3)">
-        <div class="card-preview"><img src="End-of-School_V2_Static_Dr-Rogers-Client-Template.png" alt="Dr. Rogers V2" loading="lazy"></div>
-        <div class="card-info">
-          <div><div class="card-title">Version 2: Their Best Summer</div><div class="card-layout">Centered hero · White curve</div></div>
-          <button class="card-open">View</button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- DR. K. CLARKSON -->
-  <section class="persona-group">
-    <div class="persona-label">
-      <div class="persona-icon">✨</div>
-      <div>
-        <div class="persona-name">Dr. K. Clarkson</div>
-        <div class="persona-desc">Adult Cosmetic-Focused Aesthetic Ortho</div>
-      </div>
-    </div>
-    <div class="cards-grid">
-      <div class="card" onclick="openModal(4)">
-        <div class="card-preview"><img src="End-of-School_V1_Static_Dr-Clarkson-Client-Template.png" alt="Dr. Clarkson V1" loading="lazy"></div>
-        <div class="card-info">
-          <div><div class="card-title">Version 1: Let Your Smile Do the Talking</div><div class="card-layout">Editorial · Lifestyle photo</div></div>
-          <button class="card-open">View</button>
-        </div>
-      </div>
-      <div class="card" onclick="openModal(5)">
-        <div class="card-preview"><img src="End-of-School_V2_Static_Dr-Clarkson-Client-Template.png" alt="Dr. Clarkson V2" loading="lazy"></div>
-        <div class="card-info">
-          <div><div class="card-title">Version 2: Your Summer Confidence</div><div class="card-layout">Full photo · Process flow</div></div>
-          <button class="card-open">View</button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- DR. C. YANG -->
-  <section class="persona-group">
-    <div class="persona-label">
-      <div class="persona-icon">🔬</div>
-      <div>
-        <div class="persona-name">Dr. C. Yang</div>
-        <div class="persona-desc">High-Expertise Clinical Ortho</div>
-      </div>
-    </div>
-    <div class="cards-grid">
-      <div class="card" onclick="openModal(6)">
-        <div class="card-preview"><img src="End-of-School_V1_Static_Dr-Yang-Client-Template.png" alt="Dr. Yang V1" loading="lazy"></div>
-        <div class="card-info">
-          <div><div class="card-title">Version 1: Expert Orthodontic Care</div><div class="card-layout">Portrait split · Credentials</div></div>
-          <button class="card-open">View</button>
-        </div>
-      </div>
-      <div class="card" onclick="openModal(7)">
-        <div class="card-preview"><img src="End-of-School_V2_Static_Dr-Yang-Client-Template.png" alt="Dr. Yang V2" loading="lazy"></div>
-        <div class="card-info">
-          <div><div class="card-title">Version 2: The Right Care, Right Timing</div><div class="card-layout">Dark centered · Authority</div></div>
-          <button class="card-open">View</button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- DR. G. HOUSE -->
-  <section class="persona-group">
-    <div class="persona-label">
-      <div class="persona-icon">🏛️</div>
-      <div>
-        <div class="persona-name">Dr. G. House</div>
-        <div class="persona-desc">Premium Family Ortho</div>
-      </div>
-    </div>
-    <div class="cards-grid">
-      <div class="card" onclick="openModal(8)">
-        <div class="card-preview"><img src="End-of-School_V1_Static_Dr-House-Client-Template.png" alt="Dr. House V1" loading="lazy"></div>
-        <div class="card-info">
-          <div><div class="card-title">Version 1: Outstanding Care</div><div class="card-layout">Photo overlay · Premium dark</div></div>
-          <button class="card-open">View</button>
-        </div>
-      </div>
-      <div class="card" onclick="openModal(9)">
-        <div class="card-preview"><img src="End-of-School_V2_Static_Dr-House-Client-Template.png" alt="Dr. House V2" loading="lazy"></div>
-        <div class="card-info">
-          <div><div class="card-title">Version 2: Give Them a Head Start</div><div class="card-layout">Clean minimal · Photo right</div></div>
-          <button class="card-open">View</button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-</main>
-
-<footer class="page-footer">
-  <p>OrthoBoost · End of School Campaign · Production Templates · March 2026</p>
-</footer>
-
-<!-- MODAL -->
-<div class="modal-overlay" id="modal" onclick="closeModal(event)">
-  <div class="modal-content" onclick="event.stopPropagation()">
-    <button class="modal-close" onclick="closeModal()">&times;</button>
-    <img id="modalImg" src="" alt="">
-    <div class="modal-bar">
-      <div>
-        <div class="modal-title" id="modalTitle"></div>
-        <div class="modal-sub" id="modalSub"></div>
-      </div>
-      <div class="modal-nav">
-        <button onclick="nav(-1)">‹</button>
-        <button onclick="nav(1)">›</button>
-      </div>
-    </div>
+<div class="section">
+  <div class="section-label">💰 Dr. A. Joe · Budget-Friendly Everyday Ortho</div>
+  <div class="grid">
+    <img src="End-of-School_V1_Static_Dr-Joe-Client-Template.png" alt="Dr. Joe V1">
+    <img src="End-of-School_V2_Static_Dr-Joe-Client-Template.png" alt="Dr. Joe V2">
   </div>
 </div>
 
-<script>
-const T = [
-  { img: 'End-of-School_V1_Static_Dr-Joe-Client-Template.png', title: 'Dr. A. Joe · Version 1', sub: 'Before School Ends = Best Time to Start' },
-  { img: 'End-of-School_V2_Static_Dr-Joe-Client-Template.png', title: 'Dr. A. Joe · Version 2', sub: "Don't Wait Until Summer" },
-  { img: 'End-of-School_V1_Static_Dr-Rogers-Client-Template.png', title: 'Dr. M. Rogers · Version 1', sub: 'Celebrate the End of School With a New Smile' },
-  { img: 'End-of-School_V2_Static_Dr-Rogers-Client-Template.png', title: 'Dr. M. Rogers · Version 2', sub: 'Their Best Summer Starts With Their Best Smile' },
-  { img: 'End-of-School_V1_Static_Dr-Clarkson-Client-Template.png', title: 'Dr. K. Clarkson · Version 1', sub: 'This Summer, Let Your Smile Do the Talking' },
-  { img: 'End-of-School_V2_Static_Dr-Clarkson-Client-Template.png', title: 'Dr. K. Clarkson · Version 2', sub: 'Your Summer Confidence Starts Here' },
-  { img: 'End-of-School_V1_Static_Dr-Yang-Client-Template.png', title: 'Dr. C. Yang · Version 1', sub: 'Expert Orthodontic Care. Now Accepting New Patients.' },
-  { img: 'End-of-School_V2_Static_Dr-Yang-Client-Template.png', title: 'Dr. C. Yang · Version 2', sub: 'The Right Care Starts With the Right Timing.' },
-  { img: 'End-of-School_V1_Static_Dr-House-Client-Template.png', title: 'Dr. G. House · Version 1', sub: "Outstanding Care Shouldn't Wait Until Summer" },
-  { img: 'End-of-School_V2_Static_Dr-House-Client-Template.png', title: 'Dr. G. House · Version 2', sub: 'Give Them a Head Start on Their Best Summer Yet' },
-];
-let idx = 0;
+<div class="section">
+  <div class="section-label">👨‍👩‍👧 Dr. M. Rogers · Family-Focused Community Ortho</div>
+  <div class="grid">
+    <img src="End-of-School_V1_Static_Dr-Rogers-Client-Template.png" alt="Dr. Rogers V1">
+    <img src="End-of-School_V2_Static_Dr-Rogers-Client-Template.png" alt="Dr. Rogers V2">
+  </div>
+</div>
 
-function openModal(i) {
-  idx = i;
-  document.getElementById('modalImg').src = T[i].img;
-  document.getElementById('modalTitle').textContent = T[i].title;
-  document.getElementById('modalSub').textContent = T[i].sub;
-  document.getElementById('modal').classList.add('active');
-  document.body.style.overflow = 'hidden';
-}
-function closeModal(e) {
-  if (e && e.target !== document.getElementById('modal') && !e.target.classList.contains('modal-close')) return;
-  document.getElementById('modal').classList.remove('active');
-  document.body.style.overflow = '';
-}
-function nav(d) {
-  idx = (idx + d + T.length) % T.length;
-  openModal(idx);
-}
-document.addEventListener('keydown', e => {
-  if (!document.getElementById('modal').classList.contains('active')) return;
-  if (e.key === 'Escape') closeModal();
-  if (e.key === 'ArrowLeft') nav(-1);
-  if (e.key === 'ArrowRight') nav(1);
-});
-</script>
+<div class="section">
+  <div class="section-label">✨ Dr. K. Clarkson · Adult Cosmetic-Focused Aesthetic Ortho</div>
+  <div class="grid">
+    <img src="End-of-School_V1_Static_Dr-Clarkson-Client-Template.png" alt="Dr. Clarkson V1">
+    <img src="End-of-School_V2_Static_Dr-Clarkson-Client-Template.png" alt="Dr. Clarkson V2">
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-label">🔬 Dr. C. Yang · High-Expertise Clinical Ortho</div>
+  <div class="grid">
+    <img src="End-of-School_V1_Static_Dr-Yang-Client-Template.png" alt="Dr. Yang V1">
+    <img src="End-of-School_V2_Static_Dr-Yang-Client-Template.png" alt="Dr. Yang V2">
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-label">🏛️ Dr. G. House · Premium Family Ortho</div>
+  <div class="grid">
+    <img src="End-of-School_V1_Static_Dr-House-Client-Template.png" alt="Dr. House V1">
+    <img src="End-of-School_V2_Static_Dr-House-Client-Template.png" alt="Dr. House V2">
+  </div>
+</div>
+
+<div class="footer">OrthoBoost · End of School Campaign · March 2026</div>
 
 </body>
 </html>
