@@ -4,27 +4,99 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>OrthoBoost · End of School Campaign Templates</title>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Plus Jakarta Sans', sans-serif; background: #0a0a0a; color: white; min-height: 100vh; }
 
-  .header { text-align: center; padding: 60px 24px 40px; }
+  .header { text-align: center; padding: 60px 24px 20px; }
   .header h1 { font-size: 36px; font-weight: 800; letter-spacing: -1px; margin-bottom: 8px; }
-  .header p { font-size: 14px; color: rgba(255,255,255,0.4); }
+  .header p { font-size: 14px; color: rgba(255,255,255,0.4); margin-bottom: 16px; }
+  .header-legend { display: inline-flex; gap: 20px; font-size: 12px; color: rgba(255,255,255,0.35); }
+  .header-legend span { display: inline-flex; align-items: center; gap: 6px; }
+  .legend-dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+  .legend-dot.pending { background: #555; }
+  .legend-dot.approved { background: #22c55e; }
+  .legend-dot.revision { background: #f59e0b; }
 
-  .section { max-width: 1100px; margin: 0 auto; padding: 0 24px 48px; }
+  .section { max-width: 1200px; margin: 0 auto; padding: 24px 24px 48px; }
   .section-label { font-size: 13px; font-weight: 800; color: rgba(255,255,255,0.5); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid rgba(255,255,255,0.06); }
 
-  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
 
-  .grid img {
-    width: 100%;
-    height: auto;
-    border-radius: 12px;
-    display: block;
-    border: 1px solid rgba(255,255,255,0.06);
+  .template-card { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; overflow: hidden; }
+
+  .template-card img { width: 100%; height: auto; display: block; }
+
+  .card-label { padding: 12px 16px; font-size: 13px; font-weight: 700; color: rgba(255,255,255,0.6); border-top: 1px solid rgba(255,255,255,0.04); }
+
+  /* ═══ FEEDBACK BOX ═══ */
+  .feedback { padding: 16px; border-top: 1px solid rgba(255,255,255,0.04); }
+
+  .fb-status { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; }
+  .fb-status-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+  .fb-status-dot.pending { background: #555; }
+  .fb-status-dot.approved { background: #22c55e; }
+  .fb-status-dot.revision { background: #f59e0b; }
+  .fb-status-text { font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; }
+  .fb-status-text.pending { color: #777; }
+  .fb-status-text.approved { color: #22c55e; }
+  .fb-status-text.revision { color: #f59e0b; }
+
+  .fb-buttons { display: flex; gap: 8px; margin-bottom: 12px; }
+  .fb-btn {
+    flex: 1; padding: 10px 12px; border-radius: 10px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 12px; font-weight: 700; letter-spacing: 0.5px;
+    cursor: pointer; transition: all 0.2s; border: none; text-transform: uppercase;
   }
+  .fb-btn-approve {
+    background: rgba(34,197,94,0.1); color: #22c55e; border: 1px solid rgba(34,197,94,0.2);
+  }
+  .fb-btn-approve:hover { background: rgba(34,197,94,0.2); }
+  .fb-btn-approve.active { background: #22c55e; color: white; border-color: #22c55e; }
+
+  .fb-btn-revise {
+    background: rgba(245,158,11,0.1); color: #f59e0b; border: 1px solid rgba(245,158,11,0.2);
+  }
+  .fb-btn-revise:hover { background: rgba(245,158,11,0.2); }
+  .fb-btn-revise.active { background: #f59e0b; color: white; border-color: #f59e0b; }
+
+  .fb-notes {
+    width: 100%; min-height: 70px; padding: 12px 14px;
+    background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 10px; color: white; font-family: 'DM Sans', sans-serif;
+    font-size: 13px; line-height: 1.5; resize: vertical;
+    outline: none; transition: border-color 0.2s;
+  }
+  .fb-notes::placeholder { color: rgba(255,255,255,0.2); }
+  .fb-notes:focus { border-color: rgba(255,255,255,0.2); }
+
+  .fb-save {
+    margin-top: 8px; padding: 8px 16px; border-radius: 8px;
+    background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);
+    color: rgba(255,255,255,0.5); font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 11px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase;
+    cursor: pointer; transition: all 0.2s;
+  }
+  .fb-save:hover { background: rgba(255,255,255,0.1); color: white; }
+
+  .fb-saved-msg {
+    display: none; margin-top: 8px; font-size: 11px; color: #22c55e;
+    font-weight: 600; letter-spacing: 0.5px;
+  }
+  .fb-saved-msg.show { display: block; }
+
+  .fb-history { margin-top: 12px; }
+  .fb-entry {
+    padding: 10px 12px; margin-bottom: 6px;
+    background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.04);
+    border-radius: 8px;
+  }
+  .fb-entry-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px; }
+  .fb-entry-status { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; }
+  .fb-entry-date { font-size: 10px; color: rgba(255,255,255,0.25); }
+  .fb-entry-note { font-family: 'DM Sans', sans-serif; font-size: 12px; color: rgba(255,255,255,0.5); line-height: 1.5; }
 
   .footer { text-align: center; padding: 24px; font-size: 11px; color: rgba(255,255,255,0.2); letter-spacing: 1px; }
 
@@ -36,49 +108,137 @@
 <div class="header">
   <h1>End of School Campaign</h1>
   <p>10 Templates · 5 Personas · V1 &amp; V2 per Persona</p>
-</div>
-
-<div class="section">
-  <div class="section-label">💰 Dr. A. Joe · Budget-Friendly Everyday Ortho</div>
-  <div class="grid">
-    <img src="End-of-School_V1_Static_Dr-Joe-Client-Template.png" alt="Dr. Joe V1">
-    <img src="End-of-School_V2_Static_Dr-Joe-Client-Template.png" alt="Dr. Joe V2">
+  <div class="header-legend">
+    <span><span class="legend-dot pending"></span> Pending Review</span>
+    <span><span class="legend-dot approved"></span> Approved</span>
+    <span><span class="legend-dot revision"></span> Revision Requested</span>
   </div>
 </div>
 
-<div class="section">
-  <div class="section-label">👨‍👩‍👧 Dr. M. Rogers · Family-Focused Community Ortho</div>
-  <div class="grid">
-    <img src="End-of-School_V1_Static_Dr-Rogers-Client-Template.png" alt="Dr. Rogers V1">
-    <img src="End-of-School_V2_Static_Dr-Rogers-Client-Template.png" alt="Dr. Rogers V2">
-  </div>
-</div>
-
-<div class="section">
-  <div class="section-label">✨ Dr. K. Clarkson · Adult Cosmetic-Focused Aesthetic Ortho</div>
-  <div class="grid">
-    <img src="End-of-School_V1_Static_Dr-Clarkson-Client-Template.png" alt="Dr. Clarkson V1">
-    <img src="End-of-School_V2_Static_Dr-Clarkson-Client-Template.png" alt="Dr. Clarkson V2">
-  </div>
-</div>
-
-<div class="section">
-  <div class="section-label">🔬 Dr. C. Yang · High-Expertise Clinical Ortho</div>
-  <div class="grid">
-    <img src="End-of-School_V1_Static_Dr-Yang-Client-Template.png" alt="Dr. Yang V1">
-    <img src="End-of-School_V2_Static_Dr-Yang-Client-Template.png" alt="Dr. Yang V2">
-  </div>
-</div>
-
-<div class="section">
-  <div class="section-label">🏛️ Dr. G. House · Premium Family Ortho</div>
-  <div class="grid">
-    <img src="End-of-School_V1_Static_Dr-House-Client-Template.png" alt="Dr. House V1">
-    <img src="End-of-School_V2_Static_Dr-House-Client-Template.png" alt="Dr. House V2">
-  </div>
-</div>
+<div id="app"></div>
 
 <div class="footer">OrthoBoost · End of School Campaign · March 2026</div>
+
+<script>
+const personas = [
+  { icon: '💰', name: 'Dr. A. Joe', desc: 'Budget-Friendly Everyday Ortho', templates: [
+    { id: 'joe-v1', img: 'End-of-School_V1_Static_Dr-Joe-Client-Template.png', label: 'V1: Before School Ends' },
+    { id: 'joe-v2', img: 'End-of-School_V2_Static_Dr-Joe-Client-Template.png', label: "V2: Don't Wait Until Summer" },
+  ]},
+  { icon: '👨‍👩‍👧', name: 'Dr. M. Rogers', desc: 'Family-Focused Community Ortho', templates: [
+    { id: 'rogers-v1', img: 'End-of-School_V1_Static_Dr-Rogers-Client-Template.png', label: 'V1: Celebrate the End of School' },
+    { id: 'rogers-v2', img: 'End-of-School_V2_Static_Dr-Rogers-Client-Template.png', label: 'V2: Their Best Summer' },
+  ]},
+  { icon: '✨', name: 'Dr. K. Clarkson', desc: 'Adult Cosmetic-Focused Aesthetic Ortho', templates: [
+    { id: 'clarkson-v1', img: 'End-of-School_V1_Static_Dr-Clarkson-Client-Template.png', label: 'V1: Let Your Smile Do the Talking' },
+    { id: 'clarkson-v2', img: 'End-of-School_V2_Static_Dr-Clarkson-Client-Template.png', label: 'V2: Your Summer Confidence' },
+  ]},
+  { icon: '🔬', name: 'Dr. C. Yang', desc: 'High-Expertise Clinical Ortho', templates: [
+    { id: 'yang-v1', img: 'End-of-School_V1_Static_Dr-Yang-Client-Template.png', label: 'V1: Expert Orthodontic Care' },
+    { id: 'yang-v2', img: 'End-of-School_V2_Static_Dr-Yang-Client-Template.png', label: 'V2: The Right Care, Right Timing' },
+  ]},
+  { icon: '🏛️', name: 'Dr. G. House', desc: 'Premium Family Ortho', templates: [
+    { id: 'house-v1', img: 'End-of-School_V1_Static_Dr-House-Client-Template.png', label: 'V1: Outstanding Care' },
+    { id: 'house-v2', img: 'End-of-School_V2_Static_Dr-House-Client-Template.png', label: 'V2: Give Them a Head Start' },
+  ]},
+];
+
+// LocalStorage helpers
+function getFeedback(id) {
+  const data = localStorage.getItem('fb_' + id);
+  return data ? JSON.parse(data) : { status: 'pending', entries: [] };
+}
+function saveFeedback(id, fb) {
+  localStorage.setItem('fb_' + id, JSON.stringify(fb));
+}
+
+function render() {
+  const app = document.getElementById('app');
+  let html = '';
+
+  personas.forEach(p => {
+    html += `<div class="section">
+      <div class="section-label">${p.icon} ${p.name} · ${p.desc}</div>
+      <div class="grid">`;
+
+    p.templates.forEach(t => {
+      const fb = getFeedback(t.id);
+      const statusClass = fb.status || 'pending';
+      const statusLabel = statusClass === 'approved' ? 'Approved' : statusClass === 'revision' ? 'Revision Requested' : 'Pending Review';
+
+      let entriesHtml = '';
+      if (fb.entries && fb.entries.length > 0) {
+        entriesHtml = '<div class="fb-history">';
+        fb.entries.slice().reverse().forEach(e => {
+          const color = e.status === 'approved' ? '#22c55e' : '#f59e0b';
+          entriesHtml += `<div class="fb-entry">
+            <div class="fb-entry-header">
+              <span class="fb-entry-status" style="color:${color}">${e.status === 'approved' ? '✓ Approved' : '↻ Revision'}</span>
+              <span class="fb-entry-date">${e.date}</span>
+            </div>
+            ${e.note ? `<div class="fb-entry-note">${e.note}</div>` : ''}
+          </div>`;
+        });
+        entriesHtml += '</div>';
+      }
+
+      html += `
+        <div class="template-card">
+          <img src="${t.img}" alt="${t.label}" loading="lazy">
+          <div class="card-label">${t.label}</div>
+          <div class="feedback" id="fb-${t.id}">
+            <div class="fb-status">
+              <span class="fb-status-dot ${statusClass}"></span>
+              <span class="fb-status-text ${statusClass}">${statusLabel}</span>
+            </div>
+            <div class="fb-buttons">
+              <button class="fb-btn fb-btn-approve ${fb.status === 'approved' ? 'active' : ''}" onclick="setStatus('${t.id}', 'approved')">✓ Approve</button>
+              <button class="fb-btn fb-btn-revise ${fb.status === 'revision' ? 'active' : ''}" onclick="setStatus('${t.id}', 'revision')">↻ Request Revision</button>
+            </div>
+            <textarea class="fb-notes" id="notes-${t.id}" placeholder="Add notes, feedback, or revision details...">${fb.currentNote || ''}</textarea>
+            <div style="display:flex;align-items:center;gap:12px">
+              <button class="fb-save" onclick="saveNote('${t.id}')">Save Note</button>
+              <span class="fb-saved-msg" id="saved-${t.id}">✓ Saved</span>
+            </div>
+            ${entriesHtml}
+          </div>
+        </div>`;
+    });
+
+    html += '</div></div>';
+  });
+
+  app.innerHTML = html;
+}
+
+function setStatus(id, status) {
+  const fb = getFeedback(id);
+  fb.status = status;
+  const note = document.getElementById('notes-' + id)?.value?.trim() || '';
+  if (note || status) {
+    fb.entries = fb.entries || [];
+    fb.entries.push({
+      status: status,
+      note: note,
+      date: new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', hour: '2-digit', minute: '2-digit' })
+    });
+    fb.currentNote = '';
+  }
+  saveFeedback(id, fb);
+  render();
+}
+
+function saveNote(id) {
+  const fb = getFeedback(id);
+  fb.currentNote = document.getElementById('notes-' + id)?.value || '';
+  saveFeedback(id, fb);
+  const msg = document.getElementById('saved-' + id);
+  msg.classList.add('show');
+  setTimeout(() => msg.classList.remove('show'), 2000);
+}
+
+render();
+</script>
 
 </body>
 </html>
